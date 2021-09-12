@@ -1,0 +1,496 @@
+fileFormatVersion: 2
+guid: 95045a90918a0964f9a265a9f86197bc
+timeCreated: 1547740584
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Arrow Sign
+    100002: Camera
+    100004: Cardboard Box 01
+    100006: Cardboard Box 02
+    100008: Cardboard Box 03
+    100010: Cardboard Box 04
+    100012: Cardboard Box 05
+    100014: Cardboard Box 06
+    100016: Cardboard Box 07
+    100018: Cardboard Box 08
+    100020: Caution Line
+    100022: Caution Sign
+    100024: Circle
+    100026: Circle.001
+    100028: Corner Piece
+    100030: Door 01
+    100032: Eight
+    100034: Five
+    100036: Floor 01
+    100038: //RootNode
+    100040: Forklift
+    100042: Forklift Front
+    100044: Four
+    100046: Four.001
+    100048: Hand Truck Black
+    100050: Hand Truck Blue
+    100052: Hand Truck Green
+    100054: Hand Truck Grey
+    100056: Hand Truck Red
+    100058: Loading Bridge 01
+    100060: Loading Bridge 02
+    100062: Loading Bridge 03
+    100064: Loading Bridge 04
+    100066: Loading Bridge 05
+    100068: Nine
+    100070: One
+    100072: Outside Pavement 01
+    100074: Pallet Jack Blue
+    100076: Pallet Jack Long Blue
+    100078: Pallet Jack Long Red
+    100080: Pallet Jack Long Yellow
+    100082: Pallet Jack Red
+    100084: Pallet Jack Yellow
+    100086: Pallet Long
+    100088: Pallet Normal
+    100090: Pallet Normal.001
+    100092: Pallet Small
+    100094: Pipe 01
+    100096: Pipe 02
+    100098: Plane.002
+    100100: Plastic Wrap 01
+    100102: Plastic Wrap 02
+    100104: Saloon
+    100106: Seven
+    100108: Sewer Lid
+    100110: Six
+    100112: Storage Racks Big
+    100114: Storage Racks Small
+    100116: Sun
+    100118: Sun.001
+    100120: Sun.002
+    100122: Three
+    100124: Trash Can
+    100126: Trolley Black
+    100128: Trolley Blue
+    100130: Trolley Little
+    100132: Trolley Shelf
+    100134: Trolley Wooden
+    100136: Two
+    100138: Wall 01
+    100140: Wall 02
+    100142: Wall 03
+    100144: Wall 04
+    100146: Wall 05
+    100148: Wall 06
+    100150: Wall 07
+    100152: Wall 08
+    100154: Wall 09
+    100156: Wall 10
+    100158: Warehouse Chair
+    100160: Warehouse Shelf
+    100162: Warning Cone
+    100164: Warning Cone Small
+    100166: Wild West Man
+    100168: Fork
+    400000: Arrow Sign
+    400002: Camera
+    400004: Cardboard Box 01
+    400006: Cardboard Box 02
+    400008: Cardboard Box 03
+    400010: Cardboard Box 04
+    400012: Cardboard Box 05
+    400014: Cardboard Box 06
+    400016: Cardboard Box 07
+    400018: Cardboard Box 08
+    400020: Caution Line
+    400022: Caution Sign
+    400024: Circle
+    400026: Circle.001
+    400028: Corner Piece
+    400030: Door 01
+    400032: Eight
+    400034: Five
+    400036: Floor 01
+    400038: //RootNode
+    400040: Forklift
+    400042: Forklift Front
+    400044: Four
+    400046: Four.001
+    400048: Hand Truck Black
+    400050: Hand Truck Blue
+    400052: Hand Truck Green
+    400054: Hand Truck Grey
+    400056: Hand Truck Red
+    400058: Loading Bridge 01
+    400060: Loading Bridge 02
+    400062: Loading Bridge 03
+    400064: Loading Bridge 04
+    400066: Loading Bridge 05
+    400068: Nine
+    400070: One
+    400072: Outside Pavement 01
+    400074: Pallet Jack Blue
+    400076: Pallet Jack Long Blue
+    400078: Pallet Jack Long Red
+    400080: Pallet Jack Long Yellow
+    400082: Pallet Jack Red
+    400084: Pallet Jack Yellow
+    400086: Pallet Long
+    400088: Pallet Normal
+    400090: Pallet Normal.001
+    400092: Pallet Small
+    400094: Pipe 01
+    400096: Pipe 02
+    400098: Plane.002
+    400100: Plastic Wrap 01
+    400102: Plastic Wrap 02
+    400104: Saloon
+    400106: Seven
+    400108: Sewer Lid
+    400110: Six
+    400112: Storage Racks Big
+    400114: Storage Racks Small
+    400116: Sun
+    400118: Sun.001
+    400120: Sun.002
+    400122: Three
+    400124: Trash Can
+    400126: Trolley Black
+    400128: Trolley Blue
+    400130: Trolley Little
+    400132: Trolley Shelf
+    400134: Trolley Wooden
+    400136: Two
+    400138: Wall 01
+    400140: Wall 02
+    400142: Wall 03
+    400144: Wall 04
+    400146: Wall 05
+    400148: Wall 06
+    400150: Wall 07
+    400152: Wall 08
+    400154: Wall 09
+    400156: Wall 10
+    400158: Warehouse Chair
+    400160: Warehouse Shelf
+    400162: Warning Cone
+    400164: Warning Cone Small
+    400166: Wild West Man
+    400168: Fork
+    2000000: Camera
+    2300000: Arrow Sign
+    2300002: Cardboard Box 01
+    2300004: Cardboard Box 02
+    2300006: Cardboard Box 03
+    2300008: Cardboard Box 04
+    2300010: Cardboard Box 05
+    2300012: Cardboard Box 06
+    2300014: Cardboard Box 07
+    2300016: Cardboard Box 08
+    2300018: Caution Line
+    2300020: Caution Sign
+    2300022: Circle
+    2300024: Circle.001
+    2300026: Corner Piece
+    2300028: Door 01
+    2300030: Eight
+    2300032: Five
+    2300034: Floor 01
+    2300036: Forklift
+    2300038: Forklift Front
+    2300040: Four
+    2300042: Four.001
+    2300044: Hand Truck Black
+    2300046: Hand Truck Blue
+    2300048: Hand Truck Green
+    2300050: Hand Truck Grey
+    2300052: Hand Truck Red
+    2300054: Loading Bridge 01
+    2300056: Loading Bridge 02
+    2300058: Loading Bridge 03
+    2300060: Loading Bridge 04
+    2300062: Loading Bridge 05
+    2300064: Nine
+    2300066: One
+    2300068: Outside Pavement 01
+    2300070: Pallet Jack Blue
+    2300072: Pallet Jack Long Blue
+    2300074: Pallet Jack Long Red
+    2300076: Pallet Jack Long Yellow
+    2300078: Pallet Jack Red
+    2300080: Pallet Jack Yellow
+    2300082: Pallet Long
+    2300084: Pallet Normal
+    2300086: Pallet Normal.001
+    2300088: Pallet Small
+    2300090: Pipe 01
+    2300092: Pipe 02
+    2300094: Plane.002
+    2300096: Plastic Wrap 01
+    2300098: Plastic Wrap 02
+    2300100: Saloon
+    2300102: Seven
+    2300104: Sewer Lid
+    2300106: Six
+    2300108: Storage Racks Big
+    2300110: Storage Racks Small
+    2300112: Three
+    2300114: Trash Can
+    2300116: Trolley Black
+    2300118: Trolley Blue
+    2300120: Trolley Little
+    2300122: Trolley Shelf
+    2300124: Trolley Wooden
+    2300126: Two
+    2300128: Wall 01
+    2300130: Wall 02
+    2300132: Wall 03
+    2300134: Wall 04
+    2300136: Wall 05
+    2300138: Wall 06
+    2300140: Wall 07
+    2300142: Wall 08
+    2300144: Wall 09
+    2300146: Wall 10
+    2300148: Warehouse Chair
+    2300150: Warehouse Shelf
+    2300152: Warning Cone
+    2300154: Warning Cone Small
+    2300156: Wild West Man
+    2300158: Fork
+    3300000: Arrow Sign
+    3300002: Cardboard Box 01
+    3300004: Cardboard Box 02
+    3300006: Cardboard Box 03
+    3300008: Cardboard Box 04
+    3300010: Cardboard Box 05
+    3300012: Cardboard Box 06
+    3300014: Cardboard Box 07
+    3300016: Cardboard Box 08
+    3300018: Caution Line
+    3300020: Caution Sign
+    3300022: Circle
+    3300024: Circle.001
+    3300026: Corner Piece
+    3300028: Door 01
+    3300030: Eight
+    3300032: Five
+    3300034: Floor 01
+    3300036: Forklift
+    3300038: Forklift Front
+    3300040: Four
+    3300042: Four.001
+    3300044: Hand Truck Black
+    3300046: Hand Truck Blue
+    3300048: Hand Truck Green
+    3300050: Hand Truck Grey
+    3300052: Hand Truck Red
+    3300054: Loading Bridge 01
+    3300056: Loading Bridge 02
+    3300058: Loading Bridge 03
+    3300060: Loading Bridge 04
+    3300062: Loading Bridge 05
+    3300064: Nine
+    3300066: One
+    3300068: Outside Pavement 01
+    3300070: Pallet Jack Blue
+    3300072: Pallet Jack Long Blue
+    3300074: Pallet Jack Long Red
+    3300076: Pallet Jack Long Yellow
+    3300078: Pallet Jack Red
+    3300080: Pallet Jack Yellow
+    3300082: Pallet Long
+    3300084: Pallet Normal
+    3300086: Pallet Normal.001
+    3300088: Pallet Small
+    3300090: Pipe 01
+    3300092: Pipe 02
+    3300094: Plane.002
+    3300096: Plastic Wrap 01
+    3300098: Plastic Wrap 02
+    3300100: Saloon
+    3300102: Seven
+    3300104: Sewer Lid
+    3300106: Six
+    3300108: Storage Racks Big
+    3300110: Storage Racks Small
+    3300112: Three
+    3300114: Trash Can
+    3300116: Trolley Black
+    3300118: Trolley Blue
+    3300120: Trolley Little
+    3300122: Trolley Shelf
+    3300124: Trolley Wooden
+    3300126: Two
+    3300128: Wall 01
+    3300130: Wall 02
+    3300132: Wall 03
+    3300134: Wall 04
+    3300136: Wall 05
+    3300138: Wall 06
+    3300140: Wall 07
+    3300142: Wall 08
+    3300144: Wall 09
+    3300146: Wall 10
+    3300148: Warehouse Chair
+    3300150: Warehouse Shelf
+    3300152: Warning Cone
+    3300154: Warning Cone Small
+    3300156: Wild West Man
+    3300158: Fork
+    4300000: Circle
+    4300002: Forklift Front
+    4300004: Four.001
+    4300006: Pallet Normal.001
+    4300008: Forklift
+    4300010: Plastic Wrap 02
+    4300012: Plastic Wrap 01
+    4300014: Arrow Sign
+    4300016: Cardboard Box 08
+    4300018: Cardboard Box 07
+    4300020: Circle.001
+    4300022: Warehouse Shelf
+    4300024: Pipe 02
+    4300026: Pipe 01
+    4300028: Warning Cone Small
+    4300030: Warning Cone
+    4300032: Trolley Shelf
+    4300034: Warehouse Chair
+    4300036: Trash Can
+    4300038: Sewer Lid
+    4300040: Caution Sign
+    4300042: Caution Line
+    4300044: Trolley Little
+    4300046: Trolley Black
+    4300048: Trolley Wooden
+    4300050: Trolley Blue
+    4300052: Pallet Small
+    4300054: Wall 10
+    4300056: Wall 09
+    4300058: Loading Bridge 05
+    4300060: Loading Bridge 04
+    4300062: Wall 07
+    4300064: Wall 08
+    4300066: Wall 06
+    4300068: Wall 05
+    4300070: Loading Bridge 03
+    4300072: Loading Bridge 02
+    4300074: Wall 04
+    4300076: Wall 03
+    4300078: Outside Pavement 01
+    4300080: Corner Piece
+    4300082: Door 01
+    4300084: Wall 02
+    4300086: Wall 01
+    4300088: Nine
+    4300090: Eight
+    4300092: Seven
+    4300094: Six
+    4300096: Five
+    4300098: Four
+    4300100: Three
+    4300102: Two
+    4300104: One
+    4300106: Floor 01
+    4300108: Loading Bridge 01
+    4300110: Hand Truck Grey
+    4300112: Hand Truck Blue
+    4300114: Hand Truck Red
+    4300116: Hand Truck Black
+    4300118: Hand Truck Green
+    4300120: Pallet Jack Long Yellow
+    4300122: Pallet Jack Long Blue
+    4300124: Pallet Jack Long Red
+    4300126: Pallet Long
+    4300128: Storage Racks Big
+    4300130: Pallet Jack Red
+    4300132: Pallet Jack Blue
+    4300134: Pallet Jack Yellow
+    4300136: Storage Racks Small
+    4300138: Plane.002
+    4300140: Cardboard Box 06
+    4300142: Cardboard Box 05
+    4300144: Cardboard Box 03
+    4300146: Cardboard Box 04
+    4300148: Cardboard Box 02
+    4300150: Cardboard Box 01
+    4300152: Wild West Man
+    4300154: Saloon
+    4300156: Pallet Normal
+    4300158: Fork
+    10800000: Sun
+    10800002: Sun.001
+    10800004: Sun.002
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

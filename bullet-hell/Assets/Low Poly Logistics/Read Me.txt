@@ -1,0 +1,20 @@
+Hello and thank you for purchasing Low Poly Logistics Package.
+
+There are 88 to prefabs.
+
+Most of the prefabs are set to static.
+
+Models have separate parts for animation.
+
+Texture is 512*512 png
+
+Update 1.2
+- Pack updated to Universal Render Pipeline.
+- Example Scenes have realtime directional light and baked indirect.
+- Fixed all see trough issues.
+- Added new vehicle (Black Lorry).
+- Settings folder added.
+
+
+For questions you can contact me at:
+a3deve@gmail.com
