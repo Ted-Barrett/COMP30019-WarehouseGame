@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637670432525362956
-    m_Hash: 2003956774
+      ticks: 637670459243838528
+    m_Hash: 1487549846
   m_LockFileStatus:
     m_FilePath: C:/Users/max/Documents/gitRepos/project2-project2_group_27/bullet-hell/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637670432525372955
-    m_Hash: 2889151785
+      ticks: 637670459506224492
+    m_Hash: 2575388964
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -77,9 +77,9 @@ m_PackageAssets:
         - 2.1.0-preview.5
         - 2.1.0-preview.6
         compatible:
-        - 1.5.7
-        - 1.6.0
+        - 1.7.1
         - 1.8.0
+        - 1.9.0
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -90,7 +90,7 @@ m_PackageAssets:
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
-        verified: 1.5.7
+        verified: 1.7.1
       dependencies:
       - name: com.unity.nuget.newtonsoft-json
         version: 2.0.0
@@ -128,12 +128,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
         revision: f079d307344f568804d3ea6d781013135e614e45
         path: 
-    - packageId: com.unity.ide.rider@2.0.7
+    - packageId: com.unity.ide.rider@3.0.7
       testable: 0
       isDirectDependency: 1
-      version: 2.0.7
+      version: 3.0.7
       source: 1
-      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.ide.rider@3.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -203,17 +203,11 @@ m_PackageAssets:
         - 3.0.7
         verified: 2.0.7
       dependencies:
-      - name: com.unity.test-framework
-        version: 1.1.1
-      resolvedDependencies:
-      - name: com.unity.test-framework
-        version: 1.1.24
       - name: com.unity.ext.nunit
         version: 1.0.6
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      - name: com.unity.modules.jsonserialize
-        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ext.nunit
+        version: 1.0.6
       keywords: []
       registry:
         id: main
@@ -227,20 +221,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637334461080000000
+      datePublishedTicks: 637572251600000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-        revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
+        revision: 3007c42a679bbe2c082c276e8d79279110964553
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.8
+    - packageId: com.unity.ide.visualstudio@2.0.9
       testable: 0
       isDirectDependency: 1
-      version: 2.0.8
+      version: 2.0.9
       source: 1
-      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.ide.visualstudio@2.0.8
+      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.ide.visualstudio@2.0.9
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -294,7 +288,7 @@ m_PackageAssets:
         version: 1.1.9
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.24
+        version: 1.1.26
       - name: com.unity.ext.nunit
         version: 1.0.6
       - name: com.unity.modules.imgui
@@ -314,13 +308,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637562620210000000
+      datePublishedTicks: 637580705480000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-        revision: 5cdf5d932e6ecbbd83bbe6a40eec2a94b4979501
+        revision: c7cd4c6319806423b3d918b3e9599244e3993d41
         path: 
     - packageId: com.unity.ide.vscode@1.2.3
       testable: 0
@@ -355,6 +349,7 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
+        - 1.2.4
         compatible:
         - 1.0.2
         - 1.0.3
@@ -367,7 +362,8 @@ m_PackageAssets:
         - 1.2.1
         - 1.2.2
         - 1.2.3
-        verified: 1.2.3
+        - 1.2.4
+        verified: 1.2.4
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -391,12 +387,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.test-framework@1.1.24
+    - packageId: com.unity.test-framework@1.1.26
       testable: 0
       isDirectDependency: 1
-      version: 1.1.24
+      version: 1.1.26
       source: 1
-      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.test-framework@1.1.24
+      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.test-framework@1.1.26
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -441,11 +437,11 @@ m_PackageAssets:
         - 1.1.24
         - 1.1.26
         - 1.1.27
+        - 1.1.29
         compatible:
-        - 1.1.24
-        - 1.1.26
         - 1.1.27
-        verified: 1.1.27
+        - 1.1.29
+        verified: 1.1.29
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -475,13 +471,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637505702940000000
+      datePublishedTicks: 637576439750000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
-        revision: e6fe8892689398c0d9aba4587e0ba69edc3d82b8
+        revision: ea9d07e64e6d63c4f2fd8b6bc57df0f452ff4fae
         path: 
     - packageId: com.unity.textmeshpro@3.0.6
       testable: 0
@@ -642,12 +638,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
         revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
         path: 
-    - packageId: com.unity.timeline@1.4.8
+    - packageId: com.unity.timeline@1.5.5
       testable: 0
       isDirectDependency: 1
-      version: 1.4.8
+      version: 1.5.5
       source: 1
-      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.timeline@1.4.8
+      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.timeline@1.5.5
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -727,6 +723,7 @@ m_PackageAssets:
         - 1.6.0-pre.4
         - 1.6.0-pre.5
         - 1.6.1
+        - 1.6.2
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -747,6 +744,7 @@ m_PackageAssets:
         - 1.6.0-pre.4
         - 1.6.0-pre.5
         - 1.6.1
+        - 1.6.2
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -784,13 +782,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637557616100000000
+      datePublishedTicks: 637557616440000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-        revision: 527e4364e28028f20f04fc51db671eb4bb910a26
+        revision: 4bb067f24973c7cfa1e4a453615e43083ce6855d
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
@@ -854,6 +852,90 @@ m_PackageAssets:
         type: 
         url: 
         revision: 
+        path: 
+    - packageId: com.unity.visualscripting@1.6.1
+      testable: 0
+      isDirectDependency: 1
+      version: 1.6.1
+      source: 1
+      resolvedPath: C:\Users\max\Documents\gitRepos\project2-project2_group_27\bullet-hell\Library\PackageCache\com.unity.visualscripting@1.6.1
+      assetPath: Packages/com.unity.visualscripting
+      name: com.unity.visualscripting
+      displayName: Visual Scripting
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: tool
+      description: "Visual Scripting, previously known as BOLT, is an alternative
+        workflow to design behaviours. Instead of the classic method of writing a
+        C# script, visual scripting offers a way to design behaviours intuitively
+        without code, by connecting events, actions, and data together in a graph.
+        \n\nBoth programmers and non-programmers can use node-based graphs to design
+        final logic or to quickly create prototypes. This package also features an
+        API that programmers can use for more advanced tasks, or to create custom
+        nodes that can be used by other team members."
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ai
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.physics2d
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.ai
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.physics2d
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
+        revision: d2dc8205ed231b4fc18289dddb14c0a92c76154f
         path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
@@ -2735,4 +2817,4 @@ m_PackageAssets:
   m_LocalPackages:
     m_LocalFileStatus: []
 m_ProjectPath: C:/Users/max/Documents/gitRepos/project2-project2_group_27/bullet-hell/Packages
-m_EditorVersion: 2020.3.11f1 (99c7afb366b3)
+m_EditorVersion: 2020.3.15f2 (6cf78cb77498)
