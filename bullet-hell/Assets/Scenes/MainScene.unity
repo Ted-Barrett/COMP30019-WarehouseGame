@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleDeg: 60
-  dist: 18
+  dist: 24
   lookAt: {fileID: 1570521594}
 --- !u!1 &1570521590
 GameObject:
@@ -407,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 1570521590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 1, z: 0.45}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -441,11 +441,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b2c2d349a983d49a8e31f0b3bc83df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 1548364860376050, guid: e3f782754343f474491c34dd4b504103, type: 3}
-  weights: 01000000
+  sourceObjects:
+  - {fileID: 1002364519311226, guid: 62d39ead3e1f629479fa05f5f24684ad, type: 3}
+  - {fileID: 1784436104576926, guid: 299de95f819c684488dd9e113175aefa, type: 3}
+  - {fileID: 1046939826902722, guid: 752f2ee85a895ba4da8ea435af805bdf, type: 3}
+  weights: 050000000200000001000000
   spawnPlane: {fileID: 1570521590}
-  numObjects: 1
+  numObjects: 10
 --- !u!4 &1887845244
 Transform:
   m_ObjectHideFlags: 0
