@@ -13,7 +13,13 @@ public class PlayerScript : MonoBehaviour {
     }
 
     void Update() {
-        Vector3 inputMovement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        Vector3 inputMovement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        
+        if (inputMovement.sqrMagnitude > 1.0f)
+        {
+            inputMovement = inputMovement.normalized;
+        }
+        
         controller.Move(inputMovement * Time.deltaTime * speed);
     }
 }
