@@ -529,9 +529,10 @@ MonoBehaviour:
   - {fileID: 1046939826902722, guid: 752f2ee85a895ba4da8ea435af805bdf, type: 3}
   - {fileID: 1548364860376050, guid: e3f782754343f474491c34dd4b504103, type: 3}
   - {fileID: 1823699363762860, guid: 4b8c0a623be82cc4d928711e665d7038, type: 3}
-  weights: 0a00000003000000030000000300000002000000
+  _weights: 0a00000003000000030000000300000003000000
   spawnPlane: {fileID: 476760238}
-  numObjects: 30
+  _maxObjects: 35
+  allowCollisions: 0
   rotationType: 1
 --- !u!4 &1887845244
 Transform:
