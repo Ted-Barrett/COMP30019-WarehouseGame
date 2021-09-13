@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\tedba\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tedba\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_bullet-hell.82376859.00" t="ExcludeRecursive" />
+    <e p="C:\Users\tedba\Documents\GitHub\project2-project2_group_27\bullet-hell" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Low Poly Logistics" t="Include">
+          <e p="Prefabs" t="Include">
+            <e p="Camera Light Post-Processing Setup" t="Include">
+              <e p="Readme.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Read Me.txt" t="Include" />
+          <e p="Settings" t="Include">
+            <e p="Readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CameraScript.cs" t="Include" />
+          <e p="PlayerScript.cs" t="Include" />
+        </e>
+      </e>
+      <e p="bullet-hell.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
