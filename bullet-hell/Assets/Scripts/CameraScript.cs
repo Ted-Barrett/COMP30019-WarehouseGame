@@ -8,20 +8,24 @@ using UnityEngine;
 /// </summary>
 public class CameraScript : MonoBehaviour
 {
-    public float angleDeg; // x angle of camera
-    private float _angleRad; // derived value
-    
-    public double dist; // distance of camera from target
+    [SerializeField]
+    private float angleDeg; // x angle of camera
 
-    public Transform lookAt; // object to look at
-    private Vector3 target;
+    [SerializeField]
+    private double dist; // distance of camera from target
+
+    [SerializeField]
+    private Transform lookAt; // object to look at
 
     void Update()
     {
-        target = lookAt.position;
-        _angleRad = (float) (angleDeg * Math.PI / 180);
+        Vector3 target = lookAt.position;
+
+        // angle in radians
+        float angleRad = (float) (angleDeg * Math.PI / 180);
+
         Transform thisTransform = this.transform;
-        thisTransform.position = new Vector3(0, (float) (Math.Sin(_angleRad)*dist),(float) (-Math.Cos(_angleRad)*dist)) + target;
+        thisTransform.position = new Vector3(0, (float) (Math.Sin(angleRad)*dist),(float) (-Math.Cos(angleRad)*dist)) + target;
         thisTransform.eulerAngles = new Vector3(angleDeg, 0, 0);
     }
 }
