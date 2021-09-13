@@ -14,15 +14,15 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class Scatterer : MonoBehaviour
 {
-    [SerializeField] private GameObject[] sourceObjects;
+    [SerializeField] private GameObject[] sourceObjects; // objects to spawn
 
-    [SerializeField] private int[] _weights;
+    [SerializeField] private int[] _weights; // likelihood that a given object will be chosen to spawn
 
-    [SerializeField] private GameObject spawnPlane;
+    [SerializeField] private GameObject spawnPlane; // plane on which the objects spawn
 
-    [SerializeField] private int _maxObjects;
+    [SerializeField] private int _maxObjects; // maximum number of objects that will spawn (will be less if overlap disabled)
 
-    [SerializeField] private bool allowOverlap = false;
+    [SerializeField] private bool allowOverlap = false; // allows overlapping object colliders
 
     private enum RotationType
     {
