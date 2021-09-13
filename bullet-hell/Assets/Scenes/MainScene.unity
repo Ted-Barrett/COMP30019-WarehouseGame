@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleDeg: 60
-  dist: 30
-  lookAt: {fileID: 2126086300}
+  dist: 18
+  lookAt: {fileID: 1570521594}
 --- !u!1 &1570521590
 GameObject:
   m_ObjectHideFlags: 0
