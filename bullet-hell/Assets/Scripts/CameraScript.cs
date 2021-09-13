@@ -12,12 +12,14 @@ public class CameraScript : MonoBehaviour
     private float angleDeg; // x angle of camera
 
     [SerializeField]
-    private double dist; // distance of camera from target
+    private float dist; // distance of camera from target
 
     [SerializeField]
     private Transform lookAt; // object to look at
 
-    void Update()
+    // uses late update so that if tracking something
+    // the camera pos will be updated after the object pos
+    void LateUpdate()
     {
         Vector3 target = lookAt.position;
 
