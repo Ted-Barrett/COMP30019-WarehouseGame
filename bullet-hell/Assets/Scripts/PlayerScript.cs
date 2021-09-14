@@ -13,13 +13,8 @@ public class PlayerScript : MonoBehaviour {
     }
 
     void Update() {
-        Vector3 inputMovement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        
-        if (inputMovement.sqrMagnitude > 1.0f)
-        {
-            inputMovement = inputMovement.normalized;
-        }
-        
+        // We use GetAxisRaw here, becuase GetAxis returns a smoothed value that goes between no key press and full key press kind of slowly.
+        Vector3 inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
         controller.Move(inputMovement * Time.deltaTime * speed);
     }
 }
