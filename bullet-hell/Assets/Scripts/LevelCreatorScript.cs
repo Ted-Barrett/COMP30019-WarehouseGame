@@ -60,5 +60,7 @@ public class LevelCreatorScript : MonoBehaviour {
 
         meshFilter.mesh = mesh;
         meshCollider.sharedMesh = mesh;
+
+        // Start the drone spawning
     }
 }
