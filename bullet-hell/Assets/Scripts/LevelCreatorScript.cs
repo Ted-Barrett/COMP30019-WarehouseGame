@@ -15,6 +15,7 @@ public class LevelCreatorScript : MonoBehaviour {
         meshRenderer.sharedMaterial = floorMaterial;
 
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
+        MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
 
         Mesh mesh = new Mesh();
 
@@ -58,5 +59,6 @@ public class LevelCreatorScript : MonoBehaviour {
         mesh.uv = uv;
 
         meshFilter.mesh = mesh;
+        meshCollider.sharedMesh = mesh;
     }
 }
