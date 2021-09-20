@@ -830,6 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpSpeed: 4
 --- !u!143 &2126086302
 CharacterController:
   m_ObjectHideFlags: 0

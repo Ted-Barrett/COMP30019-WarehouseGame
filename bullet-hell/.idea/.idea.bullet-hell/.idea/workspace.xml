@@ -13,9 +13,9 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DroneHandlerScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1y4IUz5dlqgv4wQ6MD5KLXzcuRx" />
