@@ -19,7 +19,12 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraScript.cs" t="Include" />
+          <e p="DroneCreatorScript.cs" t="Include" />
+          <e p="DroneHandlerScript.cs" t="Include" />
+          <e p="LevelCreatorScript.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
+          <e p="ProjectileScript.cs" t="Include" />
+          <e p="ProjectileSpawnerScript.cs" t="Include" />
           <e p="scatterer.cs" t="Include" />
         </e>
       </e>
