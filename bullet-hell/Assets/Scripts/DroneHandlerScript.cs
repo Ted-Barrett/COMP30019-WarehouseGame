@@ -9,10 +9,9 @@ public class DroneHandlerScript : MonoBehaviour {
     [SerializeField] private float delta;
 
     public Vector3 target;
+    public Vector3 exitTarget;
 
     private bool crateDropped = false;
-
-    private Vector3 exitTarget = new Vector3(5, 0, 0);
 
     [SerializeField] private float crateDropDuration;
     private float crateDropTime;

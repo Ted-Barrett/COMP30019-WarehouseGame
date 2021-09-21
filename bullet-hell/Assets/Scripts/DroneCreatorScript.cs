@@ -1,35 +1,59 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DroneCreatorScript : MonoBehaviour {
     // The mesh renderer of spawning area, so we know where to drop the crates
-    [SerializeField] private MeshRenderer spawnAreaMeshRenderer;
-    private Bounds spawnBounds;
+    [SerializeField] private MeshRenderer crateSpawnArea;
+    private Bounds crateSpawnBounds;
 
     [SerializeField] private GameObject droneWithCratePrefab;
 
     // Delay between crate spawns
     [SerializeField] private float spawnRate;
 
+    [SerializeField] private MeshRenderer droneSpawnMeshRenderer;
+    [SerializeField] private MeshRenderer droneSpawnExclusionMeshRenderer;
+
+    [SerializeField] private float spawnHeight;
+
     void Start() {
         InvokeRepeating("DropCrate", 0.0f, spawnRate);
-        spawnBounds = spawnAreaMeshRenderer.bounds;
+        crateSpawnBounds = crateSpawnArea.bounds;
     }
 
     void DropCrate() {
-        float spawnHeight = 2;
-        Vector3 spawnHeightOffset = Vector3.up * spawnHeight;
         // Spawn a drone holding a box
-        GameObject newDrone = Instantiate(droneWithCratePrefab, spawnBounds.center + spawnHeightOffset, Quaternion.identity, this.transform);
+        GameObject newDrone = Instantiate(droneWithCratePrefab, GetNewLocationWithinBounds(), Quaternion.identity, this.transform);
         
         Vector3 target = new Vector3(
-        Random.Range(spawnBounds.min.x, spawnBounds.max.x),
-        spawnHeight,
-        Random.Range(spawnBounds.min.z, spawnBounds.max.z));
+                Random.Range(crateSpawnBounds.min.x, crateSpawnBounds.max.x),
+                spawnHeight,
+                Random.Range(crateSpawnBounds.min.z, crateSpawnBounds.max.z));
 
         DroneHandlerScript droneHandlerScript = newDrone.GetComponent<DroneHandlerScript>();
         droneHandlerScript.target = target;
-        
+        droneHandlerScript.exitTarget = GetNewLocationWithinBounds();
+    }
+
+    Vector3 GetNewLocationWithinBounds() {
+        // Bit of a hack, but should work...
+        Bounds droneSpawnBounds = droneSpawnMeshRenderer.bounds;
+        Bounds droneSpawnExclusionBounds = droneSpawnExclusionMeshRenderer.bounds;
+
+        int loopCounter = 0;
+        while (loopCounter < 100) {
+            Vector3 newSpawn = new Vector3(
+                Random.Range(droneSpawnBounds.min.x, droneSpawnBounds.max.x),
+                droneSpawnExclusionBounds.min.y,
+                Random.Range(droneSpawnBounds.min.z, droneSpawnBounds.max.z));
+
+            if (!droneSpawnExclusionBounds.Contains(newSpawn)) {
+                return new Vector3(newSpawn.x, spawnHeight, newSpawn.z);
+            }
+
+            loopCounter++;
+        }
+
+        print("Loop limit reached, you probably need to assign things in the editor.");
+        return Vector3.up;
     }
 }
