@@ -9,14 +9,31 @@ public class DroneHandlerScript : MonoBehaviour {
     [SerializeField] private float delta;
 
     public Vector3 target;
+    public Vector3 exitTarget;
 
     private bool crateDropped = false;
 
-    private Vector3 exitTarget = new Vector3(5, 0, 0);
-
     [SerializeField] private float crateDropDuration;
     private float crateDropTime;
- 
+
+    // Magic number that defines where the crate should be spawned
+    private Vector3 crateOffset = new Vector3(0, -0.161f, 0);
+
+    [SerializeField] private GameObject[] crates;
+
+    void Start() {
+        // Attach a crate to the drone
+        int crateIndex = Random.Range(0, crates.Length);
+        GameObject crate = crates[crateIndex];
+        GameObject newCrate = Instantiate(crate, this.transform.position + crateOffset, Quaternion.identity, this.transform.GetChild(0));
+        newCrate.transform.SetAsFirstSibling();
+
+        Rigidbody newRigidbody = newCrate.AddComponent<Rigidbody>();
+        newRigidbody.useGravity = false;
+        newRigidbody.isKinematic = true;
+        newRigidbody.detectCollisions = true;
+    }
+
     void Update() {
         Vector3 toTarget = target - this.transform.position;
 
