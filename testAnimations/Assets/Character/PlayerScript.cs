@@ -7,10 +7,10 @@ public class PlayerScript : MonoBehaviour {
     private Animator animator;
 
     [SerializeField]
-    private float speed;
+    private float runSpeed;
 
     [SerializeField]
-    private float rotationSpeed;
+    private float walkSpeed;
 
     private float inputV;
     private float inputH;
@@ -51,11 +51,6 @@ public class PlayerScript : MonoBehaviour {
             }
         }
 
-        if (isCarrying || hasTrolly)
-        {
-            inputV = Mathf.Max(inputV, 0);
-        }
-
         if (inputV == 0 && inputH == 0)
         {
             timeIdle += Time.deltaTime;
@@ -64,20 +59,24 @@ public class PlayerScript : MonoBehaviour {
             timeIdle = 0;
         }
 
-        Vector3 inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
-        if (Mathf.Abs(inputMovement.magnitude) >= 0.001)
+        Vector3 inputMovement = Vector3.zero;
+        if (!IsHit())
         {
-            facing = inputMovement;
+            inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+
+            if (Mathf.Abs(inputMovement.magnitude) >= 0.001)
+            {
+                facing = inputMovement;
+            }
+
+            bool isRunning = !isCarrying && !hasTrolly;
+            float speed = isRunning ? runSpeed : walkSpeed;
+            controller.Move(inputMovement * Time.deltaTime * speed);
+
+            Quaternion rotation = Quaternion.LookRotation(facing);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.05f);
         }
         
-        controller.Move(inputMovement * Time.deltaTime * speed);
-
-        Quaternion rotation = Quaternion.LookRotation(facing);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.05f);
-
-
-        animator.SetFloat("inputV", inputV);
-        animator.SetFloat("inputH", inputH);
         animator.SetBool("isMoving", inputMovement.magnitude != 0);
         animator.SetBool("isCarrying", isCarrying);
         animator.SetBool("hasTrolly", hasTrolly);
@@ -87,6 +86,15 @@ public class PlayerScript : MonoBehaviour {
         {
             animator.SetTrigger("isHit");
         }
-        
+    }
+
+    public void Hit(Vector3 direction)
+    {
+        animator.SetTrigger("isHit");
+    }
+
+    private bool IsHit()
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsTag("hit");
     }
 }
