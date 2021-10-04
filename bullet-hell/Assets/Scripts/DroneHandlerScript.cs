@@ -19,33 +19,29 @@ public class DroneHandlerScript : MonoBehaviour {
     // Magic number that defines where the crate should be spawned
     private Vector3 crateOffset = new Vector3(0, -0.161f, 0);
 
+    private GameObject payload;
+
     [SerializeField] private GameObject[] crates;
 
     void Start() {
         // Attach a crate to the drone
         int crateIndex = Random.Range(0, crates.Length);
         GameObject crate = crates[crateIndex];
-        GameObject newCrate = Instantiate(crate, this.transform.position + crateOffset, Quaternion.identity, this.transform.GetChild(0));
-        newCrate.transform.SetAsFirstSibling();
+        payload = Instantiate(crate, this.transform.position + crateOffset, Quaternion.identity, this.transform.GetChild(0));
+        payload.transform.SetParent(transform);
 
-        Rigidbody newRigidbody = newCrate.AddComponent<Rigidbody>();
-        newRigidbody.useGravity = false;
-        newRigidbody.isKinematic = true;
-        newRigidbody.detectCollisions = true;
+        Rigidbody rigidBody = payload.GetComponent<Rigidbody>();
+        rigidBody.useGravity = false;
+        rigidBody.isKinematic = true;
+     
     }
 
     void Update() {
         Vector3 toTarget = target - this.transform.position;
-
-        if (crateDropped && Time.time - crateDropTime < crateDropDuration) {
-            // If we're waiting out the crate drop duration, do nothing...
-            return;
-        }
-
+      
         if (!crateDropped && toTarget.magnitude < delta) {
             // Drop the crate halfway through the drop duration
-            StartCoroutine(DropCrate(crateDropDuration / 2));
-            crateDropTime = Time.time;
+            DropCrate();
             crateDropped = true;
         } else if (!crateDropped) {
             // Move towards the target
@@ -63,17 +59,16 @@ public class DroneHandlerScript : MonoBehaviour {
         }
     }
 
-    IEnumerator DropCrate(float seconds) {
-        yield return new WaitForSeconds(seconds);
-
-        Transform crate = this.transform.GetChild(0).transform.GetChild(0);
-        Rigidbody rigidBody = crate.GetComponent<Rigidbody>();
+    private void DropCrate() {
+        payload.transform.SetParent(null);
+        Rigidbody rigidBody = payload.GetComponent<Rigidbody>();
         rigidBody.useGravity = true;
         rigidBody.isKinematic = false;
-        rigidBody.detectCollisions = false;
+
+        payload = null;
 
         // Have to do this weird logic to fix a bug with the crate falling
-        StartCoroutine(EnableCrateCollisions(crate, rigidBody));
+        //StartCoroutine(EnableCrateCollisions(crate, rigidBody));
     }
 
     // Wait for a short duration, then enable collisions.
