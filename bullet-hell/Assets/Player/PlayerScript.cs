@@ -20,12 +20,14 @@ public class PlayerScript : MonoBehaviour {
     private float timeIdle;
 
     private CharacterController controller;
+    private GrabScript grabScript;
 
     private Vector3 facing = Vector3.zero;
 
     void Start() {
         animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
+        grabScript = gameObject.GetComponent<GrabScript>();
     }
 
     void Update() {
@@ -33,24 +35,14 @@ public class PlayerScript : MonoBehaviour {
         inputV = Input.GetAxis("Vertical");
         inputH = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown("c"))
+        if (grabScript.GetPickedItem() != null)
         {
-            isCarrying = !isCarrying;
-            if (isCarrying)
-            {
-                hasTrolly = false;
-            }
-        }
-
-        if (Input.GetKeyDown("t"))
+            isCarrying = true;
+        } else
         {
-            hasTrolly = !hasTrolly;
-            if (hasTrolly)
-            {
-                isCarrying = false;
-            }
+            isCarrying = false;
         }
-
+ 
         if (inputV == 0 && inputH == 0)
         {
             timeIdle += Time.deltaTime;
@@ -74,7 +66,7 @@ public class PlayerScript : MonoBehaviour {
             controller.Move(inputMovement * Time.deltaTime * speed);
 
             Quaternion rotation = Quaternion.LookRotation(facing);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.05f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.5f);
         }
         
         animator.SetBool("isMoving", inputMovement.magnitude != 0);
@@ -97,4 +89,5 @@ public class PlayerScript : MonoBehaviour {
     {
         return animator.GetCurrentAnimatorStateInfo(0).IsTag("hit");
     }
+
 }

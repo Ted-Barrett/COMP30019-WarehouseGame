@@ -397,9 +397,9 @@ MonoBehaviour:
   exitTarget: {x: 0, y: 0, z: 0}
   crateDropDuration: 1
   crates:
-  - {fileID: 7583969851584536718, guid: 3495c325f435f5f489d2966ed835ef8a, type: 3}
-  - {fileID: 4377025340953078384, guid: 0e4c9c047dfa0a341a5f48b055c3309f, type: 3}
-  - {fileID: 5905186806762096888, guid: 1a9de8daf136844478de698c2acf7c80, type: 3}
+  - {fileID: 6086237379294569098, guid: c9a52d5f07241db4a86bb7ecbf3d9b98, type: 3}
+  - {fileID: 2843800489968572515, guid: 2d1f23bcba8743847a488b2998454ca5, type: 3}
+  - {fileID: 512225237067865714, guid: 05b2d2f8b82f0b9419d83b14aea02f59, type: 3}
 --- !u!95 &6795665358021432283
 Animator:
   serializedVersion: 3
