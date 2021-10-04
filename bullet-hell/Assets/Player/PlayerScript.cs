@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour {
         Vector3 inputMovement = Vector3.zero;
         if (!IsHit())
         {
-            inputMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+            inputMovement = Vector3.ClampMagnitude(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")), 1.0f);
 
             if (Mathf.Abs(inputMovement.magnitude) >= 0.001)
             {
