@@ -8,11 +8,19 @@ public class PickableItem : MonoBehaviour
     [SerializeField]
     private Vector3 pickedUpTranslation;
 
+    [SerializeField]
+    private Quaternion pickedUpRotation;
+
     private Rigidbody rigidBody;
 
     public Vector3 GetPickedUpTranslation()
     {
         return pickedUpTranslation;
+    }
+
+    public Quaternion GetPickedUpRotation()
+    {
+        return pickedUpRotation;
     }
 
     public Rigidbody GetRigidBody()
@@ -22,7 +30,7 @@ public class PickableItem : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {  
         rigidBody = GetComponent<Rigidbody>();
     }
 
