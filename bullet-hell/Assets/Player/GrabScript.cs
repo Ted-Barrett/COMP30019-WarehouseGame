@@ -25,7 +25,7 @@ public class GrabScript : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            print(pickedItem);
+
             PickableItem currentItem = pickedItem;
             if (currentItem != null)
             {
@@ -76,9 +76,10 @@ public class GrabScript : MonoBehaviour
         item.GetRigidBody().isKinematic = true;
         item.transform.parent = transform;
         item.transform.localPosition = item.GetPickedUpTranslation();
+        item.transform.localRotation = item.GetPickedUpRotation();
     }
 
-    private void DropItem(PickableItem item)
+    public void DropItem(PickableItem item)
     {
         pickedItem = null;
         item.transform.SetParent(null);
