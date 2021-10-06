@@ -29,6 +29,7 @@ public class GrabScript : MonoBehaviour, IBoxContainer
                 DropItem(currentItem);
                 RemoveItem(currentItem); // shuffle to end of queue
                 AddItem(currentItem);
+                return;
             }
 
             if (pickableItems.Count >= 1)
