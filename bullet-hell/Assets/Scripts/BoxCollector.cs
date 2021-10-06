@@ -6,7 +6,7 @@ public class BoxCollector : MonoBehaviour
 {
     
     [SerializeField]
-    public GameObject boxesToCollect;
+    public BoxType boxeTypesToCollect;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +22,12 @@ public class BoxCollector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       GrabScript grabScript = other.gameObject.GetComponent<GrabScript>();
-        if (grabScript != null && grabScript.GetPickedItem() != null) 
+        // handle
+        IBoxContainer boxContainer = other.gameObject.GetComponent<IBoxContainer>();
+        if (boxContainer != null) 
         {
-            PickableItem item = grabScript.GetPickedItem();
-            if (item.gameObject.name.Contains(boxesToCollect.gameObject.name))
-            {
-                grabScript.DropItem(item);
-                grabScript.RemoveItem(item);
-                Destroy(item.gameObject);
-            }
+            List<Box> boxes = boxContainer.UnloadBoxes(boxeTypesToCollect);
+            boxes.ForEach(b => Destroy(b.gameObject));
         }
     }
 }

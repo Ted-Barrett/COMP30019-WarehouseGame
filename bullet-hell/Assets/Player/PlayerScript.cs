@@ -35,14 +35,23 @@ public class PlayerScript : MonoBehaviour {
         inputV = Input.GetAxis("Vertical");
         inputH = Input.GetAxis("Horizontal");
 
-        if (grabScript.GetPickedItem() != null)
+        if (grabScript.PickedItem != null && grabScript.PickedItem.GetComponent<Box>() != null)
         {
             isCarrying = true;
-        } else
+        } else 
         {
             isCarrying = false;
         }
- 
+
+        if (grabScript.PickedItem != null && grabScript.PickedItem.GetComponent<HandTruck>() != null)
+        {
+            hasTrolly = true;
+        }
+        else
+        {
+            hasTrolly = false;
+        }
+
         if (inputV == 0 && inputH == 0)
         {
             timeIdle += Time.deltaTime;
