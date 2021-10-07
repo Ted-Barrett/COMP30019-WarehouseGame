@@ -65,8 +65,11 @@ public class PlayerScript : MonoBehaviour {
             float speed = isRunning ? runSpeed : walkSpeed;
             controller.Move(inputMovement * Time.deltaTime * speed);
 
-            Quaternion rotation = Quaternion.LookRotation(facing);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.5f);
+            if (facing != Vector3.zero)
+            {
+                Quaternion rotation = Quaternion.LookRotation(facing);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.5f);
+            }
         }
         
         animator.SetBool("isMoving", inputMovement.magnitude != 0);
