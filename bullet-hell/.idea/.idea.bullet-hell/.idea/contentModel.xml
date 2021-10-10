@@ -21,11 +21,16 @@
           <e p="CameraScript.cs" t="Include" />
           <e p="DroneCreatorScript.cs" t="Include" />
           <e p="DroneHandlerScript.cs" t="Include" />
+          <e p="ForkliftInfoScript.cs" t="Include" />
+          <e p="ForkliftSpawningScript.cs" t="Include" />
+          <e p="InvisibleDespawn.cs" t="Include" />
           <e p="LevelCreatorScript.cs" t="Include" />
+          <e p="PathInfo.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
           <e p="ProjectileScript.cs" t="Include" />
           <e p="ProjectileSpawnerScript.cs" t="Include" />
           <e p="scatterer.cs" t="Include" />
+          <e p="TruckSpawningScript.cs" t="Include" />
         </e>
       </e>
       <e p="bullet-hell.sln" t="IncludeFlat" />
