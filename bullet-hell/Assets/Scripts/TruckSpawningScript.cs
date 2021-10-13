@@ -17,7 +17,7 @@ public class TruckSpawningScript : MonoBehaviour
     [SerializeField] private Transform endRoad;
     private Vector3 _endPos;
     // rotation of the truck
-    private float _rotationY;
+    private Quaternion _rotation;
     
     [SerializeField] private float speed;
 
@@ -45,11 +45,11 @@ public class TruckSpawningScript : MonoBehaviour
         _startPos = startRoad.position+RoadOffset;
         _endPos = endRoad.position+RoadOffset;
         _translateDirection = (_endPos-_startPos).normalized;
-        _rotationY = Quaternion.LookRotation(_translateDirection,Vector3.up).eulerAngles.y;
+        _rotation = Quaternion.LookRotation(_translateDirection, Vector3.up);
         
         // initialises truck hashset
         _spawnedTrucks = new HashSet<GameObject>();
-        _spawnedTrucks.Add(Instantiate(truck, _startPos, Quaternion.Euler(0, _rotationY, 0)));
+        _spawnedTrucks.Add(Instantiate(truck, _startPos, _rotation));
         _lastSpawn = Time.time;
         _timeToNextSpawn = timeBetweenSpawns * (1 + UnityEngine.Random.Range(-spawnTimeVariation,spawnTimeVariation));
     }
@@ -67,7 +67,7 @@ public class TruckSpawningScript : MonoBehaviour
         {
             _lastSpawn = Time.time;
             _timeToNextSpawn = timeBetweenSpawns * (1 + UnityEngine.Random.Range(-spawnTimeVariation,spawnTimeVariation));
-            _spawnedTrucks.Add(Instantiate(truck, _startPos, Quaternion.Euler(0, _rotationY, 0)));
+            _spawnedTrucks.Add(Instantiate(truck, _startPos, _rotation));
         }
     }
 

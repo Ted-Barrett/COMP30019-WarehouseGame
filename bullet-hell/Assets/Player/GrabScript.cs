@@ -43,6 +43,16 @@ public class GrabScript : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetButtonDown("Throw"))
+        {
+            PickableItem currentItem = pickedItem;
+            if (currentItem != null)
+            {
+                ThrowItem(currentItem);
+                RemoveItem(currentItem);
+            }
+        }
     }
 
     public void AddItem(PickableItem item)
@@ -85,5 +95,13 @@ public class GrabScript : MonoBehaviour
         item.transform.SetParent(null);
         item.GetRigidBody().isKinematic = false;
         item.GetRigidBody().AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+    }
+
+    public void ThrowItem(PickableItem item)
+    {
+        pickedItem = null;
+        item.transform.SetParent(null);
+        item.GetRigidBody().isKinematic = false;
+        item.GetRigidBody().AddForce(item.transform.forward * 10, ForceMode.VelocityChange);
     }
 }

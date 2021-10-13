@@ -8,10 +8,11 @@ public class BoxCollector : MonoBehaviour
     [SerializeField]
     public GameObject boxesToCollect;
 
+    private GrabScript _grabScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _grabScript = GameObject.FindWithTag("Player").GetComponent<GrabScript>();
     }
 
     // Update is called once per frame
@@ -20,16 +21,15 @@ public class BoxCollector : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-       GrabScript grabScript = other.gameObject.GetComponent<GrabScript>();
-        if (grabScript != null && grabScript.GetPickedItem() != null) 
+        if (other.CompareTag("Player") && _grabScript.GetPickedItem() != null) 
         {
-            PickableItem item = grabScript.GetPickedItem();
+            PickableItem item = _grabScript.GetPickedItem();
             if (item.gameObject.name.Contains(boxesToCollect.gameObject.name))
             {
-                grabScript.DropItem(item);
-                grabScript.RemoveItem(item);
+                _grabScript.DropItem(item);
+                _grabScript.RemoveItem(item);
                 Destroy(item.gameObject);
             }
         }
