@@ -36,8 +36,8 @@ public class Scatterer : MonoBehaviour
     private void Start()
     {
         // store plane original position and rotation
-        Vector3 planePosOriginal = spawnPlane.transform.position;
-        Quaternion planeRotOriginal = spawnPlane.transform.rotation;
+        Vector3 planePosOriginal = transform.position;
+        Quaternion planeRotOriginal = transform.rotation;
 
         // get scale of plane so that the area across which the objects are distributed can be calculated
         var localScale = spawnPlane.transform.localScale;
@@ -45,8 +45,8 @@ public class Scatterer : MonoBehaviour
         float scaleZ = localScale.z * 5;
 
         // set the plane's position and rotation to 0 (will be moved back later)
-        spawnPlane.transform.position = new Vector3(0, 0, 0);
-        spawnPlane.transform.rotation = Quaternion.identity;
+        transform.position = new Vector3(0, 0, 0);
+        transform.rotation = Quaternion.identity;
 
         int totalWeight = _weights.Sum(); // total probabilistic weight of objects
         int cumWeight; // cumulative probabilistic weight of objects 
@@ -82,7 +82,7 @@ public class Scatterer : MonoBehaviour
                     }
 
                     // sets object parent to plane
-                    spawnedObjects[i].transform.parent = spawnPlane.transform;
+                    spawnedObjects[i].transform.parent = gameObject.transform;
 
                     // sets MeshCollider to convex for more functional collision.
                     if (spawnedObjects[i].GetComponent<Collider>().GetType() == typeof(MeshCollider))
@@ -136,7 +136,7 @@ public class Scatterer : MonoBehaviour
         }
 
         // returns the plane to it's original position
-        spawnPlane.transform.position = planePosOriginal;
-        spawnPlane.transform.rotation = planeRotOriginal;
+        transform.position = planePosOriginal;
+        transform.rotation = planeRotOriginal;
     }
 }
