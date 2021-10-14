@@ -9,9 +9,9 @@ public class PrintVertices : MonoBehaviour
     {
         var vertices = this.GetComponent<MeshFilter>().mesh.vertices;
 
-        foreach(Vector3 vec in vertices)
+        for(int i = 0; i < vertices.Length; i++)
         {
-            Debug.Log(vec.ToString("F7"));
+            Debug.Log("Vertex#" + i + " at " + vertices[i].ToString("F7"));
         }
     }
 

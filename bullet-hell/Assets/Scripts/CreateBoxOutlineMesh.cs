@@ -9,7 +9,7 @@ public class CreateBoxOutlineMesh : MonoBehaviour
 {
     struct CornerInfo
     {
-        public CornerInfo(int i, bool t, bool r, bool f) : this()
+        public CornerInfo(int i, bool r, bool t, bool f) : this()
         {
             index = i;
             top = t;
@@ -37,11 +37,14 @@ public class CreateBoxOutlineMesh : MonoBehaviour
         Vector3[] vertices = GetNewVertices(corners);
         Vector3[] outlineNormals = GetOutlineNormals(corners);
         int[] indices = GetNewIndices(corners);
+        Vector2[] cull = new Vector2[vertices.Length];
+
 
         Mesh newMesh = new Mesh();
         newMesh.vertices = vertices;
         newMesh.SetIndices(indices, MeshTopology.Lines, 0);
         newMesh.SetUVs(3, outlineNormals);
+        newMesh.SetUVs(1, cull);
 
         AssetDatabase.CreateAsset(newMesh, "Assets/Fbx/boxOutline.asset");
         AssetDatabase.SaveAssets();
@@ -49,9 +52,21 @@ public class CreateBoxOutlineMesh : MonoBehaviour
 
     private void SetOutlineNormals(CornerInfo[] corners, Mesh mesh) 
     {
+        Vector3 outlineNorm;
         for (int i = 0; i < corners.Length; i++)
         {
-            corners[i].outlineNorm = (corners[i].pos - centre).normalized;
+            outlineNorm = Vector3.zero;
+
+            if(corners[i].top) outlineNorm += Vector3.up;
+            else outlineNorm += Vector3.down;
+
+            if(corners[i].front) outlineNorm += Vector3.forward;
+            else outlineNorm += Vector3.back;
+
+            if(corners[i].right) outlineNorm += Vector3.right;
+            else outlineNorm += Vector3.left;
+
+            corners[i].outlineNorm = outlineNorm.normalized;
         }
     }
 
