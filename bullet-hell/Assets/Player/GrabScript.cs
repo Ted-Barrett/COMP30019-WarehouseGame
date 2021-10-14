@@ -23,9 +23,9 @@ public class GrabScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetButtonDown("Action"))
         {
-            print(pickedItem);
+
             PickableItem currentItem = pickedItem;
             if (currentItem != null)
             {
@@ -41,6 +41,16 @@ public class GrabScript : MonoBehaviour
                 {
                     PickItem(nextPickup);
                 }
+            }
+        }
+
+        if (Input.GetButtonDown("Throw"))
+        {
+            PickableItem currentItem = pickedItem;
+            if (currentItem != null)
+            {
+                ThrowItem(currentItem);
+                RemoveItem(currentItem);
             }
         }
     }
@@ -76,13 +86,22 @@ public class GrabScript : MonoBehaviour
         item.GetRigidBody().isKinematic = true;
         item.transform.parent = transform;
         item.transform.localPosition = item.GetPickedUpTranslation();
+        item.transform.localRotation = item.GetPickedUpRotation();
     }
 
-    private void DropItem(PickableItem item)
+    public void DropItem(PickableItem item)
     {
         pickedItem = null;
         item.transform.SetParent(null);
         item.GetRigidBody().isKinematic = false;
         item.GetRigidBody().AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+    }
+
+    public void ThrowItem(PickableItem item)
+    {
+        pickedItem = null;
+        item.transform.SetParent(null);
+        item.GetRigidBody().isKinematic = false;
+        item.GetRigidBody().AddForce(item.transform.forward * 10, ForceMode.VelocityChange);
     }
 }

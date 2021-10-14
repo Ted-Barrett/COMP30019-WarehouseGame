@@ -13,9 +13,23 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DroneHandlerScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" />
+      <option value="$PROJECT_DIR$/Assets/TruckDespawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TruckDespawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileSpawnerScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TruckScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ForkliftScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/ForkliftInfoScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ForkliftInfoScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InvisibleDespawn.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ForkliftSpawningScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PathInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Player/GrabScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BoxCollector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Player/PlayerScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TruckSpawningScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1y4IUz5dlqgv4wQ6MD5KLXzcuRx" />
@@ -31,6 +45,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/build temp\bullet-hell.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\tedba\Downloads\build temp" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
