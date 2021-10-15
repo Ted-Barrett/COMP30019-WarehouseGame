@@ -65,17 +65,16 @@ public class PlayerScript : MonoBehaviour {
         {
             inputMovement = Vector3.ClampMagnitude(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")), 1.0f);
 
-            if (Mathf.Abs(inputMovement.magnitude) >= 0.001)
+            if (inputMovement.magnitude >= 0.001f)
             {
                 facing = inputMovement;
+                bool isRunning = !isCarrying && !hasTrolly;
+                float speed = isRunning ? runSpeed : walkSpeed;
+                controller.Move(inputMovement * Time.deltaTime * speed);
+
+                Quaternion rotation = Quaternion.LookRotation(facing);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.5f);
             }
-
-            bool isRunning = !isCarrying && !hasTrolly;
-            float speed = isRunning ? runSpeed : walkSpeed;
-            controller.Move(inputMovement * Time.deltaTime * speed);
-
-            Quaternion rotation = Quaternion.LookRotation(facing);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.5f);
         }
         
         animator.SetBool("isMoving", inputMovement.magnitude != 0);

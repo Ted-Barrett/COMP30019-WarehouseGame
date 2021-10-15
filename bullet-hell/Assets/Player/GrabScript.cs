@@ -7,8 +7,6 @@ public class GrabScript : MonoBehaviour, IBoxContainer
 
     private PickableItem pickedItem;
 
-    private bool isSpace;
-
     private List<PickableItem> pickableItems = new List<PickableItem>();
 
     public PickableItem PickedItem { get => pickedItem; }
@@ -22,12 +20,7 @@ public class GrabScript : MonoBehaviour, IBoxContainer
     // Update is called once per frame
     void Update()
     {
-        isSpace = Input.GetKeyUp(KeyCode.Space);
-    }
-
-    private void FixedUpdate()
-    {
-        if (isSpace)
+        if (Input.GetButtonDown("Action"))
         {
 
             PickableItem currentItem = pickedItem;
@@ -50,7 +43,16 @@ public class GrabScript : MonoBehaviour, IBoxContainer
                     PickItem(nextPickup);
                 }
             }
-            isSpace = false;
+        }
+
+        if (Input.GetButtonDown("Throw"))
+        {
+            PickableItem currentItem = pickedItem;
+            if (currentItem != null)
+            {
+                ThrowItem(currentItem);
+                RemoveItem(currentItem);
+            }
         }
     }
 
@@ -135,5 +137,13 @@ public class GrabScript : MonoBehaviour, IBoxContainer
             }
         }
         return unloaded;
+    }
+
+    public void ThrowItem(PickableItem item)
+    {
+        pickedItem = null;
+        item.transform.SetParent(null);
+        item.GetRigidBody().isKinematic = false;
+        item.GetRigidBody().AddForce(item.transform.forward * 10, ForceMode.VelocityChange);
     }
 }
