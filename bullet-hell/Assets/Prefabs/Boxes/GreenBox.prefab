@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickedUpTranslation: {x: 0.035, y: 1.68, z: 0.372}
-  pickedUpRotation: {x: 0, y: 0, z: 10, w: 0}
+  pickedUpRotation: {x: 0, y: 0, z: 10}
 --- !u!114 &1693299323644583821
 MonoBehaviour:
   m_ObjectHideFlags: 0

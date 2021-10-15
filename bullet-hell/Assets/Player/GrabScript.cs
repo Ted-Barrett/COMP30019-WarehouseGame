@@ -7,6 +7,8 @@ public class GrabScript : MonoBehaviour, IBoxContainer
 
     private PickableItem pickedItem;
 
+    private bool isSpace;
+
     private List<PickableItem> pickableItems = new List<PickableItem>();
 
     public PickableItem PickedItem { get => pickedItem; }
@@ -20,7 +22,12 @@ public class GrabScript : MonoBehaviour, IBoxContainer
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        isSpace = Input.GetKeyUp(KeyCode.Space);
+    }
+
+    private void FixedUpdate()
+    {
+        if (isSpace)
         {
 
             PickableItem currentItem = pickedItem;
@@ -32,6 +39,9 @@ public class GrabScript : MonoBehaviour, IBoxContainer
                 return;
             }
 
+
+            // hack for now to remove deleted objects from list
+            filterPickable();
             if (pickableItems.Count >= 1)
             {
                 PickableItem nextPickup = pickableItems[0];
@@ -40,7 +50,21 @@ public class GrabScript : MonoBehaviour, IBoxContainer
                     PickItem(nextPickup);
                 }
             }
+            isSpace = false;
         }
+    }
+
+    private void filterPickable()
+    {
+        List<PickableItem> filtered = new List<PickableItem>();
+        foreach (PickableItem pickable in pickableItems)
+        {
+            if (pickable)
+            {
+                filtered.Add(pickable);
+            }
+        }
+        pickableItems = filtered;
     }
 
     public void AddItem(PickableItem item)

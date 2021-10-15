@@ -30,7 +30,7 @@ public class HandTruck : MonoBehaviour, IBoxContainer
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!active && boxes.Count > 0)
         {
