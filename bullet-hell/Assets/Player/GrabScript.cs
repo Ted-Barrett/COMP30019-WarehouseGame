@@ -143,7 +143,7 @@ public class GrabScript : MonoBehaviour, IBoxContainer
     {
         pickedItem = null;
         item.transform.SetParent(null);
-        item.GetRigidBody().isKinematic = false;
-        item.GetRigidBody().AddForce(item.transform.forward * 10, ForceMode.VelocityChange);
+        item.RigidBody.isKinematic = false;
+        item.RigidBody.AddForce(item.transform.forward * 10, ForceMode.VelocityChange);
     }
 }
