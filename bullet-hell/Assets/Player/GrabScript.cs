@@ -109,6 +109,14 @@ public class GrabScript : MonoBehaviour, IBoxContainer
         }
     }
 
+    public void Drop()
+    {
+        if (pickedItem != null)
+        {
+            DropItem(pickedItem);
+        }
+    }
+
     public void DropItem(PickableItem item)
     {
         pickedItem = null;
@@ -145,5 +153,11 @@ public class GrabScript : MonoBehaviour, IBoxContainer
         item.transform.SetParent(null);
         item.RigidBody.isKinematic = false;
         item.RigidBody.AddForce(item.transform.forward * 10, ForceMode.VelocityChange);
+
+        HandTruck handTruck = item.GetComponent<HandTruck>();
+        if (handTruck != null)
+        {
+            handTruck.Active = false;
+        }
     }
 }

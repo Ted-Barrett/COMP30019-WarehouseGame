@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfaaf60fb3ffa94984fdd15c22d74f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickedUpTranslation: {x: 0.035, y: 1.68, z: 0.372}
-  pickedUpRotation: {x: 0, y: 0, z: 10, w: 0}
+  pickedUpTranslation: {x: 0.035, y: 1.385, z: 0.372}
+  pickedUpRotation: {x: 0, y: 0, z: 10}
 --- !u!135 &3848413034736311829
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -240,3 +240,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f110a6086d3498548885cc0e29506f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0

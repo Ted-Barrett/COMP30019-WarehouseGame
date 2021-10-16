@@ -5,7 +5,13 @@ public class BoxCollector : MonoBehaviour
 {
     
     [SerializeField]
-    public BoxType boxeTypesToCollect;
+    private BoxType boxeTypesToCollect;
+
+    [SerializeField]
+    private ScoreScript score;
+
+    [SerializeField]
+    private int pointsPerBox;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +26,10 @@ public class BoxCollector : MonoBehaviour
         if (boxContainer != null) 
         {
             List<Box> boxes = boxContainer.UnloadBoxes(boxeTypesToCollect);
-            boxes.ForEach(b => Destroy(b.gameObject));
+            boxes.ForEach(b => {
+                Destroy(b.gameObject);
+                score.AddScore(pointsPerBox);
+            });
         }
     }
 }

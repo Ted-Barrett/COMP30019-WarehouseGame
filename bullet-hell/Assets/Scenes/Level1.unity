@@ -231,6 +231,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2105879134}
     m_Modifications:
+    - target: {fileID: 661861352544533416, guid: 99933841a6e70d94b8b704bc7cc70eef, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 661861352544533416, guid: 99933841a6e70d94b8b704bc7cc70eef, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5f09eb42b035c441ae28db0e4d270aa, type: 2}
     - target: {fileID: 681651506723102336, guid: 99933841a6e70d94b8b704bc7cc70eef, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -842,6 +850,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand Truck Red
       objectReference: {fileID: 0}
+    - target: {fileID: 4776447113397148111, guid: e670f6d6233a4f744abb49d551041a7b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776447113397148111, guid: e670f6d6233a4f744abb49d551041a7b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5f09eb42b035c441ae28db0e4d270aa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e670f6d6233a4f744abb49d551041a7b, type: 3}
 --- !u!1 &1136455498
@@ -1226,6 +1242,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6693143536207334405, guid: 336d64ff917c90b488d4edbb46db3c2a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693143536207334405, guid: 336d64ff917c90b488d4edbb46db3c2a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5f09eb42b035c441ae28db0e4d270aa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 336d64ff917c90b488d4edbb46db3c2a, type: 3}
 --- !u!1 &1277974705
@@ -1681,6 +1705,17 @@ Transform:
   m_Father: {fileID: 1876219896638475311}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623928472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2257111111011269207, guid: 582064f3b5c334c4aa99d11ed671c489, type: 3}
+  m_PrefabInstance: {fileID: 1107067080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d76988ead6f574087f0dc86258f5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1761802187
 GameObject:
   m_ObjectHideFlags: 0
@@ -5911,6 +5946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 1
+  score: {fileID: 1623928472}
+  pointsPerBox: 100
 --- !u!1 &1876437056271280165
 GameObject:
   m_ObjectHideFlags: 0
@@ -5958,6 +5995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 0
+  score: {fileID: 1623928472}
+  pointsPerBox: 100
 --- !u!1 &1876437056709557857
 GameObject:
   m_ObjectHideFlags: 0
@@ -6005,6 +6044,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 2
+  score: {fileID: 1623928472}
+  pointsPerBox: 100
 --- !u!1 &1876450786276896934
 GameObject:
   m_ObjectHideFlags: 0

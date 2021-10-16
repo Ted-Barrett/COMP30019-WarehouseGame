@@ -1442,6 +1442,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 3.222, y: -270, z: 0}
+--- !u!114 &655196166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2257111111011269207, guid: 582064f3b5c334c4aa99d11ed671c489, type: 3}
+  m_PrefabInstance: {fileID: 163810191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d76988ead6f574087f0dc86258f5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &660503425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3450988813885979078, guid: 2ac7af88448d9994684e5ab33fc0d5f0, type: 3}
@@ -1531,7 +1542,7 @@ MonoBehaviour:
   startRoad: {fileID: 2041736548}
   endRoad: {fileID: 1682199660}
   speed: 4
-  truck: {fileID: 632357647769950244, guid: 11e9f3b24e80e804bb14675af802ee6a, type: 3}
+  truck: {fileID: 1687435648231739633, guid: 7c7beb6653175c74d978f40edf4e3aae, type: 3}
   timeBetweenSpawns: 2.5
   spawnTimeVariation: 0
 --- !u!4 &702408892
@@ -1848,7 +1859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4428000676366545269, guid: d8c19a7ffa7944048964c86ec55b0e52, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4428000676366545269, guid: d8c19a7ffa7944048964c86ec55b0e52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2188,7 +2199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesToCollect: {fileID: 512225237067865714, guid: 05b2d2f8b82f0b9419d83b14aea02f59, type: 3}
+  boxeTypesToCollect: 0
+  score: {fileID: 655196166}
+  pointsPerBox: 100
 --- !u!65 &947927510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2956,7 +2969,7 @@ MonoBehaviour:
   - {fileID: 1009143755}
   - {fileID: 757886961}
   - {fileID: 1468107042}
-  forkliftPrefab: {fileID: 4671322477192555573, guid: 622d055c72cf6a948a1590016e7417dc, type: 3}
+  forkliftPrefab: {fileID: 6280920997818750444, guid: 90ac85b8126589946891fd1ec50e8c11, type: 3}
   clusterSize: 2
   speed: 5
   clusterInterval: 6
@@ -3481,7 +3494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesToCollect: {fileID: 6086237379294569098, guid: c9a52d5f07241db4a86bb7ecbf3d9b98, type: 3}
+  boxeTypesToCollect: 0
+  score: {fileID: 655196166}
+  pointsPerBox: 100
 --- !u!65 &1539944854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4398,7 +4413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxesToCollect: {fileID: 2843800489968572515, guid: 2d1f23bcba8743847a488b2998454ca5, type: 3}
+  boxeTypesToCollect: 0
+  score: {fileID: 655196166}
+  pointsPerBox: 100
 --- !u!65 &1901023128
 BoxCollider:
   m_ObjectHideFlags: 0
