@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3848413034736311829}
   - component: {fileID: 3538962510510299731}
   - component: {fileID: 7306208315023281549}
+  - component: {fileID: 314066715774407131}
   m_Layer: 0
   m_Name: RedBox
   m_TagString: Untagged
@@ -144,6 +145,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0019482627, y: 0.0022700357, z: 0.002270036}
   m_Center: {x: 0, y: 0.0011349596, z: -0.000000004132744}
+--- !u!114 &314066715774407131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2843800489968572515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58bf9fbbc311c1c4fb3f5515e0ab6539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &4054470401816633073
 GameObject:
   m_ObjectHideFlags: 0

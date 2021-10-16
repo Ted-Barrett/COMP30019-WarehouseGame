@@ -24,8 +24,10 @@
         <e p="Scripts" t="Include">
           <e p="Box.cs" t="Include" />
           <e p="BoxCollector.cs" t="Include" />
+          <e p="BoxDoubleOutlineCulling.cs" t="Include" />
           <e p="CameraScript.cs" t="Include" />
           <e p="CountdownScript.cs" t="Include" />
+          <e p="CreateBoxOutlineMesh.cs" t="Include" />
           <e p="DroneCreatorScript.cs" t="Include" />
           <e p="DroneHandlerScript.cs" t="Include" />
           <e p="ForkliftInfoScript.cs" t="Include" />
@@ -40,6 +42,7 @@
           <e p="PickableItem.cs" t="Include" />
           <e p="PlayerCollider.cs" t="Include" />
           <e p="PostProcessingScript.cs" t="Include" />
+          <e p="PrintVertices.cs" t="Include" />
           <e p="ProjectileScript.cs" t="Include" />
           <e p="ProjectileSpawnerScript.cs" t="Include" />
           <e p="scatterer.cs" t="Include" />
@@ -48,10 +51,12 @@
           <e p="TruckSpawningScript.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
+          <e p="Box Outline.shader" t="Include" />
           <e p="Cel Outline Shader.shader" t="Include" />
           <e p="Cel Shader.shader" t="Include" />
           <e p="grass.shader" t="Include" />
           <e p="Interactable Effect.shader" t="Include" />
+          <e p="Mask.shader" t="Include" />
           <e p="Sobel Edge.shader" t="Include" />
         </e>
         <e p="TextMeshPro Imports" t="Include">

@@ -478,6 +478,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 940b623f55cd39147809b594b16b7141, type: 3}
+--- !u!114 &129198341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2257111111011269207, guid: 582064f3b5c334c4aa99d11ed671c489, type: 3}
+  m_PrefabInstance: {fileID: 163810191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d76988ead6f574087f0dc86258f5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &146279447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2579,9 +2590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxeTypesToCollect: 0
-  score: {fileID: 0}
-  pointsPerBox: 0
+  boxeTypesToCollect: 1
+  score: {fileID: 129198341}
+  pointsPerBox: 1
 --- !u!65 &947927510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4126,9 +4137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxeTypesToCollect: 0
-  score: {fileID: 0}
-  pointsPerBox: 0
+  boxeTypesToCollect: 2
+  score: {fileID: 129198341}
+  pointsPerBox: 1
 --- !u!65 &1539944854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5637,8 +5648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 0
-  score: {fileID: 0}
-  pointsPerBox: 0
+  score: {fileID: 129198341}
+  pointsPerBox: 1
 --- !u!65 &1901023128
 BoxCollider:
   m_ObjectHideFlags: 0
