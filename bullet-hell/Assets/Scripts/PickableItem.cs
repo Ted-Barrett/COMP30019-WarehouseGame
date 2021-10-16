@@ -9,23 +9,23 @@ public class PickableItem : MonoBehaviour
     private Vector3 pickedUpTranslation;
 
     [SerializeField]
-    private Quaternion pickedUpRotation;
+    private Vector3 pickedUpRotation;
 
     private Rigidbody rigidBody;
 
-    public Vector3 GetPickedUpTranslation()
+    public Vector3 PickedUpTranslation
     {
-        return pickedUpTranslation;
+        get => pickedUpTranslation;
     }
 
-    public Quaternion GetPickedUpRotation()
+    public Vector3 PickedUpRotation
     {
-        return pickedUpRotation;
+        get => pickedUpRotation;
     }
 
-    public Rigidbody GetRigidBody()
+    public Rigidbody RigidBody
     {
-        return rigidBody;
+        get => rigidBody;
     }
 
     // Start is called before the first frame update
