@@ -2592,7 +2592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 1
   score: {fileID: 129198341}
-  pointsPerBox: 1
+  pointsPerBox: 100
 --- !u!65 &947927510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4139,7 +4139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 2
   score: {fileID: 129198341}
-  pointsPerBox: 1
+  pointsPerBox: 100
 --- !u!65 &1539944854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5649,7 +5649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxeTypesToCollect: 0
   score: {fileID: 129198341}
-  pointsPerBox: 1
+  pointsPerBox: 100
 --- !u!65 &1901023128
 BoxCollider:
   m_ObjectHideFlags: 0
