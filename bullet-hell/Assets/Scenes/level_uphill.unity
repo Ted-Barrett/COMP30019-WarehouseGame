@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxeTypesToCollect: 0
+  boxeTypesToCollect: 1
   score: {fileID: 655196166}
   pointsPerBox: 100
 --- !u!65 &947927510
@@ -3494,7 +3494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb26bda57b014f45b8518fbedcca94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxeTypesToCollect: 0
+  boxeTypesToCollect: 2
   score: {fileID: 655196166}
   pointsPerBox: 100
 --- !u!65 &1539944854
