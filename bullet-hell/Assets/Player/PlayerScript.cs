@@ -61,7 +61,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
         Vector3 inputMovement = Vector3.zero;
-        if (!IsHit())
+        if (!IsHit)
         {
             inputMovement = Vector3.ClampMagnitude(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")), 1.0f);
 
@@ -84,18 +84,22 @@ public class PlayerScript : MonoBehaviour {
 
         if (Input.GetKeyDown("h"))
         {
-            animator.SetTrigger("isHit");
+            Hit(Vector3.zero);
         }
     }
 
     public void Hit(Vector3 direction)
     {
-        animator.SetTrigger("isHit");
+        if (!IsHit)
+        {
+            grabScript.Drop();
+            animator.SetTrigger("isHit");
+        }
     }
 
-    private bool IsHit()
+    private bool IsHit
     {
-        return animator.GetCurrentAnimatorStateInfo(0).IsTag("hit");
+        get => animator.GetCurrentAnimatorStateInfo(0).IsTag("hit");
     }
 
 }
