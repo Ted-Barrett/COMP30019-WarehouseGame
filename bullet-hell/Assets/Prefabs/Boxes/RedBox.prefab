@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 3848413034736311829}
   - component: {fileID: 3538962510510299731}
   - component: {fileID: 7306208315023281549}
-  - component: {fileID: -6193478301491141733}
   m_Layer: 0
   m_Name: RedBox
   m_TagString: Untagged
@@ -67,7 +66,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 8156895907804950008, guid: c9033a3998086a440bdb616a9efe7383, type: 3}
-  - {fileID: 2100000, guid: 55d5b96e41488924ea981245236f04e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -235,9 +233,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4054470401816633073}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f110a6086d3498548885cc0e29506f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  originalMesh: {fileID: 4300000, guid: 25575706ef9e26142a70324dfc72c31c, type: 2}

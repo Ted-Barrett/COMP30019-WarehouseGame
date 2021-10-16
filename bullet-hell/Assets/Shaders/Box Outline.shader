@@ -20,7 +20,7 @@ Shader "Custom/Box Outline"
         { 
             "RenderType" = "Transparent"
             "IgnoreProjector" = "True"
-            "Queue" = "Overlay" 
+            "Queue" = "Transparent" 
         }
 
         Stencil

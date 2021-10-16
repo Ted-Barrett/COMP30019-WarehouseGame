@@ -5,7 +5,7 @@ Shader "Custom/Mask"
         Tags 
         { 
             "RenderType" = "Transparent" 
-            "Queue" = "Overlay-10"
+            "Queue" = "Geometry-10"
         }
 
 
