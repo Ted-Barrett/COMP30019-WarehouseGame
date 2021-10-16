@@ -46,6 +46,7 @@
         <e p="Shaders" t="Include">
           <e p="Cel Outline Shader.shader" t="Include" />
           <e p="Cel Shader.shader" t="Include" />
+          <e p="grass.shader" t="Include" />
           <e p="Sobel Edge.shader" t="Include" />
         </e>
         <e p="TextMeshPro Imports" t="Include">

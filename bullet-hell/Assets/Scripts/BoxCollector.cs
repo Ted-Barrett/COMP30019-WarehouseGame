@@ -27,6 +27,8 @@ public class BoxCollector : MonoBehaviour
         {
             List<Box> boxes = boxContainer.UnloadBoxes(boxeTypesToCollect);
             boxes.ForEach(b => {
+                var particleEffect = item.GetComponent<PickableItem>().getCollectEffect();
+                Instantiate(particleEffect, item.transform.position + new Vector3(0.0f,-0.5f,0.0f), Quaternion.identity);
                 Destroy(b.gameObject);
                 score.AddScore(pointsPerBox);
             });
