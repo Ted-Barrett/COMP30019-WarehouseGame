@@ -11,6 +11,8 @@ public class PickableItem : MonoBehaviour
     [SerializeField]
     private Vector3 pickedUpRotation;
 
+    [SerializeField] private GameObject collectEffect;
+
     private Rigidbody rigidBody;
 
     public Vector3 PickedUpTranslation
@@ -26,6 +28,11 @@ public class PickableItem : MonoBehaviour
     public Rigidbody RigidBody
     {
         get => rigidBody;
+    }
+
+    public GameObject getCollectEffect()
+    {
+        return collectEffect;
     }
 
     // Start is called before the first frame update

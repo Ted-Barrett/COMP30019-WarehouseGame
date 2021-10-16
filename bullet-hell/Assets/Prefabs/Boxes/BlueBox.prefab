@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickedUpTranslation: {x: 0.035, y: 1.385, z: 0.372}
   pickedUpRotation: {x: 0, y: 0, z: 10}
+  collectEffect: {fileID: 2012935700467251984, guid: 2c0a454428975d244bbc30383f2509ec, type: 3}
 --- !u!54 &3575428312168569173
 Rigidbody:
   m_ObjectHideFlags: 0

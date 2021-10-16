@@ -27,9 +27,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PathInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Player/GrabScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BoxCollector.cs" />
       <option value="$PROJECT_DIR$/Assets/Player/PlayerScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TruckSpawningScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PickableItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BoxCollector.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1y4IUz5dlqgv4wQ6MD5KLXzcuRx" />
