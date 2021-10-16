@@ -98,7 +98,18 @@ public class ForkliftSpawningScript : MonoBehaviour
                     pathNodes[forklift.Value.CurrentNode + 1].transform.position - forklift.Key.transform.position,
                     forklift.Key.transform.forward) < 0.0f)
                 {
-                    forklift.Value.CurrentNode += 1;
+                    if (nodeTypes[forklift.Value.CurrentNode + 1] == PathInfo.PathTypeEnum.Straight)
+                    {
+                        if (Vector3.Dot(forklift.Key.transform.forward,
+                            pathNodes[forklift.Value.CurrentNode + 1].transform.forward)>0.0f)
+                        {
+                            forklift.Value.CurrentNode += 1;
+                        }
+                    }
+                    else
+                    {
+                        forklift.Value.CurrentNode += 1;
+                    }
                 }
             }
 
@@ -127,8 +138,9 @@ public class ForkliftSpawningScript : MonoBehaviour
 
                 // calculates rotation to be applied about pivot point
                 var rotation = Quaternion.Euler(0,
-                    (float) (direction * speed / pathScripts[forklift.Value.CurrentNode].radius * 180.0f / Math.PI) * Time.deltaTime, 0);
-                
+                    (float) (direction * speed / pathScripts[forklift.Value.CurrentNode].radius * 180.0f / Math.PI) *
+                    Time.deltaTime, 0);
+
                 // moves and rotates forklift
                 forklift.Key.transform.position = originalPos - fromPivot + rotation * fromPivot;
                 forklift.Key.transform.Rotate(new Vector3(0.0f, rotation.eulerAngles.y, 0.0f));
