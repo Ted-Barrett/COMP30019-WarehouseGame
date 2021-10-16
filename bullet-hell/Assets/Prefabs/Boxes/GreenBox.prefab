@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 854175340198011681}
   - component: {fileID: 854175340198011691}
   - component: {fileID: 854175340198011695}
-  m_Layer: 7
+  - component: {fileID: 1693299323644583821}
+  m_Layer: 0
   m_Name: GreenBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
