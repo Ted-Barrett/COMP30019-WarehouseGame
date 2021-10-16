@@ -22,6 +22,9 @@ public class PlayerScript : MonoBehaviour {
     private CharacterController controller;
     private GrabScript grabScript;
 
+    [SerializeField]
+    private CameraScript cameraScript;
+
     private Vector3 facing = Vector3.zero;
 
     void Start() {
@@ -92,6 +95,7 @@ public class PlayerScript : MonoBehaviour {
     {
         if (!IsHit)
         {
+            cameraScript.Shake();
             grabScript.Drop();
             animator.SetTrigger("isHit");
         }

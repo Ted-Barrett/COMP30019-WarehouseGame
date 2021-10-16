@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -17,6 +15,14 @@ public class CameraScript : MonoBehaviour
     [SerializeField]
     private Transform lookAt; // object to look at
 
+    private float shakeDuration = 0f;
+
+    [SerializeField]
+    private float maxShakeDuration = 0.5f;
+
+    [SerializeField]
+    private float shakeAmount = 0.4f;
+
     // uses late update so that if tracking something
     // the camera pos will be updated after the object pos
     void LateUpdate()
@@ -29,5 +35,20 @@ public class CameraScript : MonoBehaviour
         Transform thisTransform = this.transform;
         thisTransform.position = new Vector3(0, (float) (Math.Sin(angleRad)*dist),(float) (-Math.Cos(angleRad)*dist)) + target;
         thisTransform.eulerAngles = new Vector3(angleDeg, 0, 0);
+
+        if (shakeDuration > 0)
+        {
+            this.transform.position += UnityEngine.Random.insideUnitSphere * shakeAmount;
+            shakeDuration -= Time.deltaTime;
+        }
+        else
+        {
+            shakeDuration = 0f;
+        }
+    }
+
+    public void Shake()
+    {
+        shakeDuration = maxShakeDuration;
     }
 }
