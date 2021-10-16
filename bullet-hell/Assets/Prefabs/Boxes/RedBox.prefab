@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfaaf60fb3ffa94984fdd15c22d74f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickedUpTranslation: {x: 0.035, y: 1.385, z: 0.372}
-  pickedUpRotation: {x: 0, y: 0, z: 10}
+  pickedUpTranslation: {x: 0, y: 1.206, z: 0.414}
+  pickedUpRotation: {x: -6.295, y: 0, z: 0}
   collectEffect: {fileID: 2262278698631277646, guid: 84a400a9cae73404d907c3ee26399d89, type: 3}
 --- !u!135 &3848413034736311829
 SphereCollider:

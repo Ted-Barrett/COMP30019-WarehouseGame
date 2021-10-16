@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfaaf60fb3ffa94984fdd15c22d74f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickedUpTranslation: {x: 0.035, y: 1.68, z: 0.372}
-  pickedUpRotation: {x: 0, y: 0, z: 10}
+  pickedUpTranslation: {x: 0, y: 1.206, z: 0.414}
+  pickedUpRotation: {x: -6.295, y: 0, z: 0}
   collectEffect: {fileID: 8948623059154917773, guid: 4ac9797648bb92c4a9961917e61ddf03, type: 3}
 --- !u!114 &1557268099911606804
 MonoBehaviour:
