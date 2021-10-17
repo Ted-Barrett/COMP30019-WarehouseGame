@@ -15,34 +15,9 @@ Shader "Custom/Box Outline"
         [HideInInspector] _Tau ("Tau", float) = 6.28319
 
     }
-    SubShader
-    {
-        Tags 
-        { 
-            "RenderType" = "Transparent"
-            "IgnoreProjector" = "True"
-            "Queue" = "Transparent" 
-        }
 
-        Stencil
-        {
-            Ref 2
-            Comp NotEqual
-        }
-
-        Pass
-        {
-            Cull Off
-            ZTest Always
-            Zwrite Off       
-            Blend SrcAlpha OneMinusSrcAlpha
-
-            CGPROGRAM
+    CGINCLUDE
             #include "UnityCG.cginc"
-
-            #pragma vertex vert
-            #pragma geometry geo
-            #pragma fragment frag
 
             struct appdata
             {
@@ -176,6 +151,49 @@ Shader "Custom/Box Outline"
                 return i.colour;
             }
 
+            ENDCG
+
+
+    SubShader
+    {
+        Tags 
+        { 
+            "RenderType" = "Transparent"
+            "IgnoreProjector" = "True"
+            "Queue" = "Transparent" 
+        }
+
+        Pass
+        {
+            Cull Off
+            ZTest LEqual
+            Zwrite Off       
+            Blend SrcAlpha OneMinusSrcAlpha
+            
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma geometry geo
+            #pragma fragment frag
+            ENDCG
+        }
+
+        Pass
+        {
+            Stencil
+            {
+                Ref 2
+                Comp NotEqual
+            }
+            
+            Cull Off
+            ZTest GEqual
+            Zwrite Off       
+            Blend SrcAlpha OneMinusSrcAlpha
+            
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma geometry geo
+            #pragma fragment frag
             ENDCG
         }
     }
