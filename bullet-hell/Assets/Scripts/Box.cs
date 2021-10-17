@@ -8,6 +8,9 @@ public class Box : MonoBehaviour
     private Rigidbody rigidBody;
 
     [SerializeField]
+    private GameObject onDestroy;
+
+    [SerializeField]
     private BoxType type;
 
     public BoxType Type { get => type;  }
@@ -23,6 +26,12 @@ public class Box : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void Explode()
+    {
+        GameObject particle = Instantiate(onDestroy, transform.position, Quaternion.identity);
         
     }
 }

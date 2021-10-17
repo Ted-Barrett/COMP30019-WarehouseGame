@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bf9fbbc311c1c4fb3f5515e0ab6539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDestroy: {fileID: 8183299495558750218, guid: c0212b35272f6e346bbb6dd1885cf607, type: 3}
   type: 1
 --- !u!1 &2312978620736499579
 GameObject:

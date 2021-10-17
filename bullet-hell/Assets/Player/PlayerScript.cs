@@ -96,6 +96,7 @@ public class PlayerScript : MonoBehaviour {
         if (!IsHit)
         {
             cameraScript.Shake();
+            grabScript.Hit();
             grabScript.Drop();
             animator.SetTrigger("isHit");
         }

@@ -59,6 +59,16 @@ public class HandTruck : MonoBehaviour, IBoxContainer
         }
     }
 
+    public void Hit()
+    {
+        List<Box> boxes = UnloadBoxes(boxType);
+        boxes.ForEach(b =>
+        {
+            b.Explode();
+            Destroy(b.gameObject);
+        });
+    }
+
     public List<Box> UnloadBoxes(BoxType type)
     {
         if (type != boxType)
