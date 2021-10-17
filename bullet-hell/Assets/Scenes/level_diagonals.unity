@@ -5059,9 +5059,8 @@ MonoBehaviour:
   angleDeg: 30
   dist: 30
   lookAt: {fileID: 1300220230}
-  maxShakeDuration: 2
-  shakeAmount: 0.7
-  decreaseFactor: 1
+  maxShakeDuration: 0.4
+  shakeAmount: 0.5
 --- !u!81 &1738694770
 AudioListener:
   m_ObjectHideFlags: 0
