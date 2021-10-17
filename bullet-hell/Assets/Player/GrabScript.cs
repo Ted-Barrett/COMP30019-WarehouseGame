@@ -69,6 +69,28 @@ public class GrabScript : MonoBehaviour, IBoxContainer
         pickableItems = filtered;
     }
 
+    public void Hit()
+    {
+        if (pickedItem != null)
+        {
+            Box box = pickedItem.GetComponent<Box>();
+            if (box != null)
+            {
+                box.Explode();
+                Destroy(pickedItem.gameObject);
+                return;
+            }
+
+
+            HandTruck truck = pickedItem.GetComponent<HandTruck>();
+            if (truck != null)
+            {
+                truck.Hit();
+                return;
+            }
+        } 
+    }
+
     public void AddItem(PickableItem item)
     {
         foreach (PickableItem pickable in pickableItems)

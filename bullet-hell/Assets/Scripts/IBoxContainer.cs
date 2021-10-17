@@ -7,6 +7,7 @@ using UnityEngine;
 public interface IBoxContainer
 {
     List<Box> UnloadBoxes(BoxType type);
+    public void Hit();
 }
 
 
