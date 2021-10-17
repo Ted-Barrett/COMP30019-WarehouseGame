@@ -3592,6 +3592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 4
   walkSpeed: 1.5
+  cameraScript: {fileID: 0}
 --- !u!114 &8940745775522178924
 MonoBehaviour:
   m_ObjectHideFlags: 0
