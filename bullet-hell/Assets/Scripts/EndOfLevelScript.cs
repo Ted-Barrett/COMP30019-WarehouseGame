@@ -13,9 +13,11 @@ public class EndOfLevelScript : MonoBehaviour {
     }
 
     public void NextLevel() {
-        nextLevelMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        nextLevelMenuUI.SetActive(false);
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextLevelIndex = currentLevelIndex < 5 ? currentLevelIndex + 1 : 0;
+        SceneManager.LoadScene(nextLevelIndex);
     }
 
     public void QuitGame() {
