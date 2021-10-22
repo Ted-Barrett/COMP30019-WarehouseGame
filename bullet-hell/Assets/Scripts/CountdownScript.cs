@@ -9,6 +9,8 @@ public class CountdownScript : MonoBehaviour {
     private float timeLeft;
 
     [SerializeField] private EndOfLevelScript endOfLevelScript;
+    [SerializeField] private ScoreScript scoreScript;
+
 
     void Start() {
         TimerText = this.transform.Find("TimerText").GetComponent<TextMeshProUGUI>();
@@ -21,7 +23,7 @@ public class CountdownScript : MonoBehaviour {
             timeLeft -= Time.deltaTime;
             DisplayTime(Mathf.CeilToInt(timeLeft));
         } else {
-            endOfLevelScript.Enable();
+            endOfLevelScript.Enable(scoreScript.score);
         }
     }
 
