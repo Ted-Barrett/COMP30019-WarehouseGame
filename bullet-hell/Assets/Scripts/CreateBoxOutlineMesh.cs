@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System;
 using UnityEngine;
-using UnityEditor;
+
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
 
 public class CreateBoxOutlineMesh : MonoBehaviour
 {
@@ -46,8 +45,10 @@ public class CreateBoxOutlineMesh : MonoBehaviour
         newMesh.SetUVs(3, outlineNormals);
         newMesh.SetUVs(1, cull);
 
-        AssetDatabase.CreateAsset(newMesh, "Assets/Fbx/boxOutline.asset");
-        AssetDatabase.SaveAssets();
+        #if UNITY_EDITOR
+            AssetDatabase.CreateAsset(newMesh, "Assets/Fbx/boxOutline.asset");
+            AssetDatabase.SaveAssets();
+        #endif
     }
 
     private void SetOutlineNormals(CornerInfo[] corners, Mesh mesh) 

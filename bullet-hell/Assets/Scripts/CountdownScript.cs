@@ -8,6 +8,8 @@ public class CountdownScript : MonoBehaviour {
     [SerializeField] private int countdownDuration;
     private float timeLeft;
 
+    [SerializeField] private EndOfLevelScript endOfLevelScript;
+
     void Start() {
         TimerText = this.transform.Find("TimerText").GetComponent<TextMeshProUGUI>();
         ForegroundImage = this.transform.Find("Wheel").GetComponent<Image>();
@@ -19,7 +21,7 @@ public class CountdownScript : MonoBehaviour {
             timeLeft -= Time.deltaTime;
             DisplayTime(Mathf.CeilToInt(timeLeft));
         } else {
-
+            endOfLevelScript.Enable();
         }
     }
 
