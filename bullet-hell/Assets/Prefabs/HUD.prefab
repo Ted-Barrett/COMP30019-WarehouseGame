@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9416ca8b542bf49bab37d4f09fbc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownDuration: 15
+  countdownDuration: 60
   endOfLevelScript: {fileID: 0}
   scoreScript: {fileID: 2257111111011269207}
 --- !u!1 &2257111111892412443
