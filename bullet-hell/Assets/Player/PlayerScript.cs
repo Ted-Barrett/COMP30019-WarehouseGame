@@ -27,10 +27,13 @@ public class PlayerScript : MonoBehaviour {
 
     private Vector3 facing = Vector3.zero;
 
+    private AudioSource hitSoundEffect;
+
     void Start() {
         animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
         grabScript = gameObject.GetComponent<GrabScript>();
+        hitSoundEffect = gameObject.GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -95,6 +98,7 @@ public class PlayerScript : MonoBehaviour {
     {
         if (!IsHit)
         {
+            hitSoundEffect.PlayOneShot(hitSoundEffect.clip);
             cameraScript.Shake();
             grabScript.Hit();
             grabScript.Drop();
