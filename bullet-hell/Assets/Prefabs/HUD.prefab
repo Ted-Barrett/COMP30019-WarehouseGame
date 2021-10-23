@@ -59,7 +59,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &2257111110323206682
 MonoBehaviour:
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d76988ead6f574087f0dc86258f5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &2257111111322246368
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +486,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9416ca8b542bf49bab37d4f09fbc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownDuration: 180
+  countdownDuration: 60
+  endOfLevelScript: {fileID: 0}
+  scoreScript: {fileID: 2257111111011269207}
 --- !u!1 &2257111111892412443
 GameObject:
   m_ObjectHideFlags: 0

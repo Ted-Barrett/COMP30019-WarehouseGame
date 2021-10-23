@@ -4,7 +4,7 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour {
     private TextMeshProUGUI ScoreText;
-    private int score = 0;
+    public int score = 0;
 
     void Start() {
         ScoreText = this.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>();
