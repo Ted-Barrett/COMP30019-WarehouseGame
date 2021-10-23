@@ -4250,6 +4250,10 @@ PrefabInstance:
       propertyPath: walkSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6058438874715182555, guid: 8041facb74fd4614b8f8b194366b83bf, type: 3}
+      propertyPath: cameraScript
+      value: 
+      objectReference: {fileID: 1738694769}
     - target: {fileID: 6400336209702993711, guid: 8041facb74fd4614b8f8b194366b83bf, type: 3}
       propertyPath: m_Name
       value: Player
