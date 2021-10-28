@@ -10923,10 +10923,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioGameLoop
       objectReference: {fileID: 0}
-    - target: {fileID: 4849132892498392100, guid: b369040ec40c9034ead640f4018b16c9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4849132892498392107, guid: b369040ec40c9034ead640f4018b16c9, type: 3}
       propertyPath: m_RootOrder
       value: 17
