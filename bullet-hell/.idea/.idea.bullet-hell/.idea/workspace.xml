@@ -8,7 +8,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/PickUpBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/ThrowPrompt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/PointsHint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/MoveDetect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TrolleyCollect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/DeliverBox.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -31,6 +38,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PickableItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BoxCollector.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ForkliftSpawningScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/PromptScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TutorialScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/PromptScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/MoveDetect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TrolleyCollect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/ThrowPrompt.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/DeliverBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/PickUpBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/PointsHint.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1y4IUz5dlqgv4wQ6MD5KLXzcuRx" />

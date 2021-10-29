@@ -30,6 +30,7 @@
           <e p="CreateBoxOutlineMesh.cs" t="Include" />
           <e p="DroneCreatorScript.cs" t="Include" />
           <e p="DroneHandlerScript.cs" t="Include" />
+          <e p="EndOfLevelScript.cs" t="Include" />
           <e p="ForkliftInfoScript.cs" t="Include" />
           <e p="ForkliftSpawningScript.cs" t="Include" />
           <e p="HandTruck.cs" t="Include" />
@@ -49,6 +50,17 @@
           <e p="ScoreScript.cs" t="Include" />
           <e p="SobelFilterScript.cs" t="Include" />
           <e p="TruckSpawningScript.cs" t="Include" />
+          <e p="Tutorial" t="Include">
+            <e p="DeliverBox.cs" t="Include" />
+            <e p="MoveDetect.cs" t="Include" />
+            <e p="PickUpBox.cs" t="Include" />
+            <e p="PointsHint.cs" t="Include" />
+            <e p="PromptScript.cs" t="Include" />
+            <e p="ThrowPrompt.cs" t="Include" />
+            <e p="TrolleyCollect.cs" t="Include" />
+            <e p="TutorialObject.cs" t="Include" />
+            <e p="TutorialScript.cs" t="Include" />
+          </e>
         </e>
         <e p="Shaders" t="Include">
           <e p="Box Outline.shader" t="Include" />
