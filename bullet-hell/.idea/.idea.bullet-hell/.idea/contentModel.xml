@@ -22,6 +22,7 @@
           <e p="PlayerScript.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="BaseMenuScript.cs" t="Include" />
           <e p="Box.cs" t="Include" />
           <e p="BoxCollector.cs" t="Include" />
           <e p="BoxDoubleOutlineCulling.cs" t="Include" />
@@ -33,12 +34,14 @@
           <e p="EndOfLevelScript.cs" t="Include" />
           <e p="ForkliftInfoScript.cs" t="Include" />
           <e p="ForkliftSpawningScript.cs" t="Include" />
+          <e p="HandlePlayerPrefs.cs" t="Include" />
           <e p="HandTruck.cs" t="Include" />
           <e p="IBoxContainer.cs" t="Include" />
           <e p="InvisibleDespawn.cs" t="Include" />
           <e p="LevelCreatorScript.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="PathInfo.cs" t="Include" />
+          <e p="PauseHandling.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PickableItem.cs" t="Include" />
           <e p="PlayerCollider.cs" t="Include" />
@@ -48,7 +51,11 @@
           <e p="ProjectileSpawnerScript.cs" t="Include" />
           <e p="scatterer.cs" t="Include" />
           <e p="ScoreScript.cs" t="Include" />
+          <e p="SettingsMenu.cs" t="Include" />
+          <e p="SliderScript.cs" t="Include" />
           <e p="SobelFilterScript.cs" t="Include" />
+          <e p="StarControllerScript.cs" t="Include" />
+          <e p="StarScript.cs" t="Include" />
           <e p="TruckSpawningScript.cs" t="Include" />
           <e p="Tutorial" t="Include">
             <e p="DeliverBox.cs" t="Include" />
@@ -61,6 +68,7 @@
             <e p="TutorialObject.cs" t="Include" />
             <e p="TutorialScript.cs" t="Include" />
           </e>
+          <e p="UpdateAudio.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="Box Outline.shader" t="Include" />
