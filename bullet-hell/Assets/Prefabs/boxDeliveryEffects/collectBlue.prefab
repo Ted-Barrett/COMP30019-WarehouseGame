@@ -4885,6 +4885,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: collectTick
       objectReference: {fileID: 0}
+    - target: {fileID: 2580475491708127458, guid: 8db324ce449a0804bab0f76a1a6801fc, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580475491708127458, guid: 8db324ce449a0804bab0f76a1a6801fc, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580475491708127458, guid: 8db324ce449a0804bab0f76a1a6801fc, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2580475491708127459, guid: 8db324ce449a0804bab0f76a1a6801fc, type: 3}
       propertyPath: m_RootOrder
       value: 0
