@@ -144,9 +144,9 @@ GameObject:
   - component: {fileID: 273581074}
   - component: {fileID: 273581076}
   - component: {fileID: 273581075}
-  - component: {fileID: 3160750650341074630}
+  - component: {fileID: 965405102}
   m_Layer: 5
-  m_Name: AudioSettings
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3160750650341074630
+--- !u!114 &965405102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 273581073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89737b5f3f0d6d94784b4ad863d46cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: ff70ac615089b054fa255146e1f67c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentMenuScript: {fileID: 8947832237602487411}
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3160750650341074630}
+      - m_Target: {fileID: 965405102}
         m_TargetAssemblyTypeName: BaseMenuScript, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AUDIO SETTINGS
+  m_text: SETTINGS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2700,7 +2700,7 @@ GameObject:
   - component: {fileID: 2987758192420404086}
   - component: {fileID: 3005902890348339104}
   m_Layer: 5
-  m_Name: AudioSettingsButton
+  m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2810,7 +2810,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8947832237602487411}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: AudioSettings
+        m_MethodName: Settings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

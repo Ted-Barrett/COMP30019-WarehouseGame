@@ -13,9 +13,11 @@ public class PauseMenu : BaseMenuScript
         SceneManager.LoadScene("MainMenuScene");
     }
 
-    public void AudioSettings()
+    public void Settings()
     {
-        transform.parent.Find("AudioSettings").gameObject.SetActive(true);
+        GameObject settingsMenu = transform.parent.Find("Settings").gameObject;
+        settingsMenu.SetActive(true);
+        settingsMenu.GetComponent<SettingsMenu>().SetAllSliderValues();
         gameObject.SetActive(false);
     }
 }

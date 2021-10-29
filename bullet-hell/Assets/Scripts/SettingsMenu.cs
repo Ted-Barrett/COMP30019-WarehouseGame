@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class AudioSettingsMenu : BaseMenuScript
+public class SettingsMenu : BaseMenuScript
 {
     public void SetAllSliderValues()
     {
