@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -947,6 +947,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 110716761, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
+      propertyPath: reqScore
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455479285, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
+      propertyPath: reqScore
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816539644, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
+      propertyPath: reqScore
+      value: 900
+      objectReference: {fileID: 0}
     - target: {fileID: 3124004803910357170, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1798,6 +1810,10 @@ PrefabInstance:
     - target: {fileID: 4849132892498392100, guid: b369040ec40c9034ead640f4018b16c9, type: 3}
       propertyPath: m_Name
       value: AudioGameLoop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849132892498392100, guid: b369040ec40c9034ead640f4018b16c9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849132892498392107, guid: b369040ec40c9034ead640f4018b16c9, type: 3}
       propertyPath: m_RootOrder

@@ -24,6 +24,7 @@ public class CountdownScript : MonoBehaviour {
             DisplayTime(Mathf.CeilToInt(timeLeft));
         } else {
             endOfLevelScript.Enable(scoreScript.score);
+            transform.parent.gameObject.SetActive(false);
         }
     }
 
