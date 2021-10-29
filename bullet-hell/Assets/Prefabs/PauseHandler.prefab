@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5255647349314619067}
+      - m_Target: {fileID: 8947832237602487411}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 273581074}
   - component: {fileID: 273581076}
   - component: {fileID: 273581075}
+  - component: {fileID: 3160750650341074630}
   m_Layer: 5
   m_Name: AudioSettings
   m_TagString: Untagged
@@ -211,6 +212,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3160750650341074630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273581073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89737b5f3f0d6d94784b4ad863d46cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentMenuScript: {fileID: 8947832237602487411}
 --- !u!1 &280830505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,9 +1325,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5255647349314619067}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: BackAudioSettings
+      - m_Target: {fileID: 3160750650341074630}
+        m_TargetAssemblyTypeName: BaseMenuScript, Assembly-CSharp
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1943,6 +1957,7 @@ GameObject:
   - component: {fileID: 5255647348664421412}
   - component: {fileID: 5255647348664421414}
   - component: {fileID: 5255647348664421415}
+  - component: {fileID: 8947832237602487411}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -2011,6 +2026,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8947832237602487411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5255647348664421413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed2b96dd8a53ee4ab8ed8ca1c10ac0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentMenuScript: {fileID: 0}
 --- !u!1 &5255647348903292998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5255647349314619067}
+      - m_Target: {fileID: 8947832237602487411}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -2290,7 +2318,7 @@ GameObject:
   - component: {fileID: 5255647349314619065}
   - component: {fileID: 5255647349314619070}
   - component: {fileID: 5255647349314619071}
-  - component: {fileID: 5255647349314619067}
+  - component: {fileID: 8858537885932312633}
   m_Layer: 5
   m_Name: PauseHandler
   m_TagString: Untagged
@@ -2380,7 +2408,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5255647349314619067
+--- !u!114 &8858537885932312633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2389,10 +2417,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5255647349314619068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed2b96dd8a53ee4ab8ed8ca1c10ac0d, type: 3}
+  m_Script: {fileID: 11500000, guid: f02deaff8c923dd48a6e2ec9997c4516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 5255647348664421413}
 --- !u!1 &5255647349870928246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,8 +2541,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5255647349314619067}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 8858537885932312633}
+        m_TargetAssemblyTypeName: PauseHandling, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -2781,7 +2808,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5255647349314619067}
+      - m_Target: {fileID: 8947832237602487411}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: AudioSettings
         m_Mode: 1
