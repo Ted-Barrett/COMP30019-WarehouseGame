@@ -4278,15 +4278,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 110716761, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: reqScore
-      value: 600
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 1455479285, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: reqScore
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1816539644, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: reqScore
-      value: 900
+      value: 2300
       objectReference: {fileID: 0}
     - target: {fileID: 3124004803910357170, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: m_Pivot.x

@@ -949,15 +949,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 110716761, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: reqScore
-      value: 600
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 1455479285, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: reqScore
-      value: 30
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1816539644, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: reqScore
-      value: 900
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 3124004803910357170, guid: 5b5d5b3c92448df4f8ca9f001fd9c3a3, type: 3}
       propertyPath: m_Pivot.x
@@ -2417,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8665386962354178276, guid: 0ee4b5fb4b6bb8a43beba18b7bd6ceb3, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8665386962354178276, guid: 0ee4b5fb4b6bb8a43beba18b7bd6ceb3, type: 3}
       propertyPath: m_AnchorMax.x
