@@ -11,15 +11,11 @@ public class GrabScript : MonoBehaviour, IBoxContainer
 
     public PickableItem PickedItem { get => pickedItem; }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        // hack for now to remove deleted objects from list
+        filterPickable();
         if (Input.GetButtonDown("Action"))
         {
 
@@ -32,9 +28,7 @@ public class GrabScript : MonoBehaviour, IBoxContainer
                 return;
             }
 
-
-            // hack for now to remove deleted objects from list
-            filterPickable();
+            
             if (pickableItems.Count >= 1)
             {
                 PickableItem nextPickup = pickableItems[0];

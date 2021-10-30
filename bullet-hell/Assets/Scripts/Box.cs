@@ -7,6 +7,8 @@ public class Box : MonoBehaviour
 
     private Rigidbody rigidBody;
 
+    private bool givenScore = false;
+
     [SerializeField]
     private GameObject onDestroy;
 
@@ -16,6 +18,13 @@ public class Box : MonoBehaviour
     public BoxType Type { get => type;  }
 
     public Rigidbody RigidBody { get => rigidBody; }
+
+    public void giveScore()
+    {
+        givenScore = true;
+    }
+
+    public bool GivenScore => givenScore;
 
     // Start is called before the first frame update
     void Start()
