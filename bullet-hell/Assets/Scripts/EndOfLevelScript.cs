@@ -34,7 +34,7 @@ public class EndOfLevelScript : MonoBehaviour {
         Time.timeScale = 1f;
         nextLevelMenuUI.SetActive(false);
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextLevelIndex = currentLevelIndex < 5 ? currentLevelIndex + 1 : 0;
+        int nextLevelIndex = currentLevelIndex < 4 ? currentLevelIndex + 1 : 0;
         SceneManager.LoadScene(nextLevelIndex);
     }
 
