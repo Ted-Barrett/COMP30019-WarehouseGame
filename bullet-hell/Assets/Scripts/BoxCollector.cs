@@ -11,6 +11,9 @@ public class BoxCollector : MonoBehaviour
     private ScoreScript score;
 
     [SerializeField]
+    private BezosFlasherScript bezosFlasher;
+
+    [SerializeField]
     private int pointsPerBox;
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class BoxCollector : MonoBehaviour
                 Instantiate(particleEffect, b.transform.position + new Vector3(0.0f,-0.5f,0.0f), Quaternion.identity);
                 Destroy(b.gameObject);
                 score.AddScore(pointsPerBox);
+                bezosFlasher.BoxCollected();
             });
         }
     }
