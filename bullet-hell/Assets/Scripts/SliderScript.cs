@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum PlayerPrefsKeys
-{
-    MusicVolume,
-    SFXVolume
-};
-
 public class SliderScript : MonoBehaviour
 {
     [SerializeField]
