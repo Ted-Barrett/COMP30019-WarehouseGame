@@ -12,18 +12,9 @@ public class ButtonDisableEnable : MonoBehaviour
     [SerializeField]
     private Sprite unlockedImage;
 
-    private const bool DISABLE_LEVEL_ACCESS_WHEN_LOCKED = false;
-
     public void DisableButton()
     {
-        if(DISABLE_LEVEL_ACCESS_WHEN_LOCKED)
-        {
-            GetComponent<Button>().enabled = false;
-        }
-        else
-        {
-            GetComponent<Button>().targetGraphic = null;
-        }
+        GetComponent<Button>().enabled = false;
 
         transform.Find("Picture").gameObject.GetComponent<Image>().sprite = lockedImage;
     }
