@@ -7,7 +7,6 @@ public class MainMenu : BaseMenuScript {
         levelSelectMenu.SetActive(true);
         levelSelectMenu.GetComponent<LevelSelectMenu>().LoadMenu();
         gameObject.SetActive(false);
-        Debug.Log("here");
     }
 
     public void QuitGame() {

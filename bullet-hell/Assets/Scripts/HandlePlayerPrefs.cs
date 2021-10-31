@@ -16,8 +16,9 @@ public enum PlayerPrefsKeys
 
 public class HandlePlayerPrefs : MonoBehaviour
 {
-    public const int LEVEL_START_INDEX = ((int)PlayerPrefsKeys.Diagonals);
+    public const int LEVEL_START_ENUM_INDEX = ((int)PlayerPrefsKeys.Diagonals);
     private const float DEFAULT_VAL = 1.0f;
+    public const float UNLOCKED_VAL = 0f;
     void Awake() 
     {
         foreach(PlayerPrefsKeys key in Enum.GetValues(typeof(PlayerPrefsKeys)))

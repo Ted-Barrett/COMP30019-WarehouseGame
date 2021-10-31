@@ -10,10 +10,11 @@ public class LevelSelectMenu : BaseMenuScript
     private const int DIAGONALS_BUILD_INDEX = 2;
     private const int UPHILL_BUILD_INDEX = 3;
     private const int HIGHRISE_BUILD_INDEX = 4;
+    public const int MAX_BUILD_INDEX = 4;
 
     public void LoadMenu()
     {
-        for(int i = HandlePlayerPrefs.LEVEL_START_INDEX; 
+        for(int i = HandlePlayerPrefs.LEVEL_START_ENUM_INDEX; 
             i < Enum.GetNames(typeof(PlayerPrefsKeys)).Length;
             i++)
         {
