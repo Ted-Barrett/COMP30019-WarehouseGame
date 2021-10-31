@@ -29,6 +29,8 @@ public class PlayerScript : MonoBehaviour {
 
     private AudioSource hitSoundEffect;
 
+    private float hitCoolDown;
+
     void Start() {
         animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<CharacterController>();
@@ -67,7 +69,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
         Vector3 inputMovement = Vector3.zero;
-        if (!IsHit)
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("hit"))
         {
             inputMovement = Vector3.ClampMagnitude(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")), 1.0f);
 
@@ -81,6 +83,8 @@ public class PlayerScript : MonoBehaviour {
                 Quaternion rotation = Quaternion.LookRotation(facing);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.5f);
             }
+
+            hitCoolDown = Mathf.Max(0, hitCoolDown - Time.deltaTime);
         }
         
         animator.SetBool("isMoving", inputMovement.magnitude != 0);
@@ -98,6 +102,7 @@ public class PlayerScript : MonoBehaviour {
     {
         if (!IsHit)
         {
+            hitCoolDown = 2.0f;
             hitSoundEffect.PlayOneShot(hitSoundEffect.clip);
             cameraScript.Shake();
             grabScript.Hit();
@@ -108,7 +113,7 @@ public class PlayerScript : MonoBehaviour {
 
     private bool IsHit
     {
-        get => animator.GetCurrentAnimatorStateInfo(0).IsTag("hit");
+        get => animator.GetCurrentAnimatorStateInfo(0).IsTag("hit") || hitCoolDown > 0;
     }
 
 }
