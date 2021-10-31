@@ -26,6 +26,14 @@ public class EndOfLevelScript : MonoBehaviour {
             nextLevelButton.GetComponent<Image>().enabled = false;
             nextLevelButton.GetComponent<Button>().enabled = false;
         }
+        
+        int nextLevelBuildIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            
+        if(nextLevelBuildIndex <= LevelSelectMenu.MAX_BUILD_INDEX)
+        {
+            PlayerPrefs.SetFloat(((PlayerPrefsKeys)nextLevelBuildIndex).ToString(),
+                                 HandlePlayerPrefs.UNLOCKED_VAL);
+        }
 
         Time.timeScale = 0f;
     }

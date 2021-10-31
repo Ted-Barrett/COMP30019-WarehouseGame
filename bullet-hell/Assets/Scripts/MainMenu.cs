@@ -3,7 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : BaseMenuScript {
     public void PlayGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        GameObject levelSelectMenu = transform.parent.Find("LevelSelect").gameObject;
+        levelSelectMenu.SetActive(true);
+        levelSelectMenu.GetComponent<LevelSelectMenu>().LoadMenu();
+        gameObject.SetActive(false);
     }
 
     public void QuitGame() {

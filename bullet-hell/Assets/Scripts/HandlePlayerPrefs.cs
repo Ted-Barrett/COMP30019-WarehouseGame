@@ -3,16 +3,29 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+public enum PlayerPrefsKeys
+{
+    MusicVolume,
+    SFXVolume,
+    Diagonals,
+    Uphill,
+    Highrise
+};
+
+
+
 public class HandlePlayerPrefs : MonoBehaviour
 {
-    private const float DEAULT_AUDIO_VAL = 1.0f;
+    public const int LEVEL_START_ENUM_INDEX = ((int)PlayerPrefsKeys.Diagonals);
+    private const float DEFAULT_VAL = 1.0f;
+    public const float UNLOCKED_VAL = 0f;
     void Awake() 
     {
         foreach(PlayerPrefsKeys key in Enum.GetValues(typeof(PlayerPrefsKeys)))
         {
             if(!PlayerPrefs.HasKey(key.ToString()))
             {
-                PlayerPrefs.SetFloat(key.ToString(), DEAULT_AUDIO_VAL);
+                PlayerPrefs.SetFloat(key.ToString(), DEFAULT_VAL);
             }
         }
     }
