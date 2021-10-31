@@ -12,7 +12,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/ThrowPrompt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/PointsHint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/MoveDetect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TrolleyCollect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/DeliverBox.cs" root0="FORCE_HIGHLIGHTING" />
@@ -21,7 +20,6 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DroneHandlerScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" />
       <option value="$PROJECT_DIR$/Assets/TruckDespawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TruckDespawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileSpawnerScript.cs" />
@@ -49,6 +47,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/DeliverBox.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/PickUpBox.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/PointsHint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Scatterer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScattererStuff/Scatterable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScattererStuff/Scatterer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1y4IUz5dlqgv4wQ6MD5KLXzcuRx" />
