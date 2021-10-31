@@ -20,7 +20,8 @@ public class Scatterer : MonoBehaviour
 
     [SerializeField] private GameObject spawnPlane; // plane on which the objects spawn
 
-    [SerializeField] private int _maxObjects; // maximum number of objects that will spawn (will be less if overlap disabled)
+    [SerializeField]
+    private int _maxObjects; // maximum number of objects that will spawn (will be less if overlap disabled)
 
     [SerializeField] private bool allowOverlap = false; // allows overlapping object colliders
 
@@ -70,6 +71,7 @@ public class Scatterer : MonoBehaviour
                     spawnedObjects[i] = Instantiate(sourceObjects[j],
                         new Vector3(Random.Range(-scaleX, scaleX), 0, Random.Range(-scaleZ, scaleZ)),
                         Quaternion.identity);
+                    spawnedObjects[i].AddComponent<Scatterable>();
 
                     // rotates if necessary
                     if (rotationType == RotationType.Square)
@@ -97,45 +99,48 @@ public class Scatterer : MonoBehaviour
 
         if (!allowOverlap)
         {
-            // finds collisions between objects and removes them
-            foreach (var spawnedObject in spawnedObjects)
+            for (int i = 0; i < spawnedObjects.Length; i++)
             {
-                if (spawnedObject.IsDestroyed())
+                var iScatterable = spawnedObjects[i].GetComponent<Scatterable>();
+
+                if (iScatterable.setForRemoval)
                 {
                     continue;
                 }
 
-                var spawnedObjectBounds = spawnedObject.GetComponent<Collider>().bounds;
-                foreach (var collidingObject in spawnedObjects)
+                var iBounds = spawnedObjects[i].GetComponent<Renderer>().bounds;
+
+                for (int j = i + 1; j < spawnedObjects.Length; j++)
                 {
-                    if (spawnedObject.IsDestroyed())
+                    if (iScatterable.setForRemoval)
                     {
                         break;
                     }
 
-                    if (collidingObject.IsDestroyed() || spawnedObject.Equals(collidingObject))
+                    var jScatterable = spawnedObjects[j].GetComponent<Scatterable>();
+
+                    if (jScatterable.setForRemoval)
                     {
                         continue;
                     }
 
-                    var collidingObjectBounds = collidingObject.GetComponent<Collider>().bounds;
-                    if (spawnedObjectBounds.Intersects(collidingObjectBounds))
+                    var jBounds = spawnedObjects[j].GetComponent<Renderer>().bounds;
+
+                    if (iBounds.Intersects(jBounds))
                     {
-                        // destroys the smaller object
-                        if (spawnedObjectBounds.size.sqrMagnitude > collidingObjectBounds.size.sqrMagnitude)
-                        {
-                            Destroy(collidingObject);
-                        }
-                        else
-                        {
-                            Destroy(spawnedObject);
-                        }
+                        iScatterable.setForRemoval = true;
                     }
                 }
             }
         }
 
-        // returns the plane to it's original position
+        var removeObjects = spawnedObjects.Where(o => o.GetComponent<Scatterable>().setForRemoval).ToArray();
+
+        for (int i = removeObjects.Length - 1; i >= 0; i--)
+        {
+            Destroy(removeObjects[i].gameObject);
+        }
+
         transform.position = planePosOriginal;
         transform.rotation = planeRotOriginal;
     }
