@@ -11,6 +11,9 @@ using Random = UnityEngine.Random;
 /// more likely to spawn.
 ///
 /// A given index in _weights corresponds to the same index in sourceObjects
+///
+/// This script should be placed on an empty object which has a plane as its child. The empty can be moved and rotated,
+/// and the plane can be scaled. The plane should be positioned at (0,0,0) relative to the parent.
 /// </summary>
 public class Scatterer : MonoBehaviour
 {
@@ -36,21 +39,21 @@ public class Scatterer : MonoBehaviour
 
     private void Start()
     {
-        // store plane original position and rotation
-        Vector3 planePosOriginal = transform.position;
-        Quaternion planeRotOriginal = transform.rotation;
+        // store original position and rotation
+        Vector3 posOriginal = transform.position;
+        Quaternion rotationOriginal = transform.rotation;
 
         // get scale of plane so that the area across which the objects are distributed can be calculated
         var localScale = spawnPlane.transform.localScale;
         float scaleX = localScale.x * 5; // multiplied by 5 to correspond by the default plane mesh
         float scaleZ = localScale.z * 5;
 
-        // set the plane's position and rotation to 0 (will be moved back later)
+        // set the empty's position and rotation to 0 (will be moved back later)
         transform.position = new Vector3(0, 0, 0);
         transform.rotation = Quaternion.identity;
 
         int totalWeight = _weights.Sum(); // total probabilistic weight of objects
-        int cumWeight; // cumulative probabilistic weight of objects 
+        int cumWeight; // cumulative probabilistic weight of objects
         int rndWeight; // a random weight which will allow a certain object to be chosen
 
         GameObject[] spawnedObjects = new GameObject[_maxObjects]; // stores objects which have been spawned
@@ -71,7 +74,7 @@ public class Scatterer : MonoBehaviour
                     spawnedObjects[i] = Instantiate(sourceObjects[j],
                         new Vector3(Random.Range(-scaleX, scaleX), 0, Random.Range(-scaleZ, scaleZ)),
                         Quaternion.identity);
-                    spawnedObjects[i].AddComponent<Scatterable>();
+                    spawnedObjects[i].AddComponent<Scatterable>(); // used to keep track of if the object should be destroyed
 
                     // rotates if necessary
                     if (rotationType == RotationType.Square)
@@ -83,7 +86,7 @@ public class Scatterer : MonoBehaviour
                         spawnedObjects[i].transform.rotation = Quaternion.Euler(0, Random.value * 360f, 0);
                     }
 
-                    // sets object parent to plane
+                    // sets object parent to the empty
                     spawnedObjects[i].transform.parent = gameObject.transform;
 
                     // sets MeshCollider to convex for more functional collision.
@@ -97,6 +100,7 @@ public class Scatterer : MonoBehaviour
             }
         }
 
+        // loops through all pairs of objects, and marks one object in a colliding pair for removal.
         if (!allowOverlap)
         {
             for (int i = 0; i < spawnedObjects.Length; i++)
@@ -108,7 +112,7 @@ public class Scatterer : MonoBehaviour
                     continue;
                 }
 
-                var iBounds = spawnedObjects[i].GetComponent<Renderer>().bounds;
+                var iBounds = spawnedObjects[i].GetComponent<Collider>().bounds;
 
                 for (int j = i + 1; j < spawnedObjects.Length; j++)
                 {
@@ -124,7 +128,7 @@ public class Scatterer : MonoBehaviour
                         continue;
                     }
 
-                    var jBounds = spawnedObjects[j].GetComponent<Renderer>().bounds;
+                    var jBounds = spawnedObjects[j].GetComponent<Collider>().bounds;
 
                     if (iBounds.Intersects(jBounds))
                     {
@@ -134,14 +138,17 @@ public class Scatterer : MonoBehaviour
             }
         }
 
+        // gets all the objects marked for removal
         var removeObjects = spawnedObjects.Where(o => o.GetComponent<Scatterable>().setForRemoval).ToArray();
 
+        // removes marked objects in reverse list order
         for (int i = removeObjects.Length - 1; i >= 0; i--)
         {
             Destroy(removeObjects[i].gameObject);
         }
 
-        transform.position = planePosOriginal;
-        transform.rotation = planeRotOriginal;
+        // restores the empty to it's original position and rotation
+        transform.position = posOriginal;
+        transform.rotation = rotationOriginal;
     }
 }
