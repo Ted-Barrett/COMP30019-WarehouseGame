@@ -15,7 +15,9 @@ public class MainMenu : BaseMenuScript {
 
     public void Settings()
     {
-        transform.parent.Find("Settings").gameObject.SetActive(true);
+        GameObject settingsMenu = transform.parent.Find("Settings").gameObject;
+        settingsMenu.SetActive(true);
+        settingsMenu.GetComponent<SettingsMenu>().SetAllSliderValues();
         gameObject.SetActive(false);
     }
 }
