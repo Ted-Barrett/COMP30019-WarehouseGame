@@ -1,3 +1,8 @@
+// Shader to make the transparent, pulsating box outlines.
+
+// It is applied to the box outline mesh which is defined in terms of lines
+// and is simply the edges (non-repeating) of the box.
+
 Shader "Custom/Box Outline"
 {
     Properties
@@ -23,14 +28,12 @@ Shader "Custom/Box Outline"
             {
                 float4 vertex : POSITION;
                 float3 smoothNormal : TEXCOORD3;
-                float2 cull : TEXCOORD1;
             };
 
             struct v2g
             {
                 float3 position : TEXCOORD0;
                 float2 smoothNormal : TEXCOORD3;
-                float2 cull : TEXCOORD1;
             };
 
             struct g2f
@@ -50,15 +53,19 @@ Shader "Custom/Box Outline"
             float _DistMult;
             float _Tau;
 
+            // Convert vertex position and vertex normals to view space
             v2g vert(appdata i)
             {
                 v2g o;
                 o.position = UnityObjectToViewPos(i.vertex);
                 o.smoothNormal = normalize(UnityObjectToViewPos(float4(i.smoothNormal, 0.0)).xy);
-                o.cull = i.cull;
                 return o;
             }
 
+            // Take in an edge of the box (one that is not removed by BoxDoubleOutlineCulling.cs)
+            // and output triangles making up the outline corresponding to that edge.
+            // Rounded corners are done in the for loop and a time varying sin value is used
+            // to interpolate between the two outer colours and two outline thicknesses.
             [maxvertexcount(36)]
             void geo(line v2g i[2], inout TriangleStream<g2f> stream)
             {
@@ -156,6 +163,8 @@ Shader "Custom/Box Outline"
 
     SubShader
     {
+        // Relevant tags to set up for transparency
+        // Draw order is after Mask.shader and solid objects
         Tags 
         { 
             "RenderType" = "Transparent"
@@ -165,6 +174,7 @@ Shader "Custom/Box Outline"
 
         Pass
         {
+            // If the box outline is the front object always draw
             Cull Off
             ZTest LEqual
             Zwrite Off       
@@ -179,6 +189,11 @@ Shader "Custom/Box Outline"
 
         Pass
         {
+            // If the box outline is not the front object only draw it if it's not behind 
+            // an object with the mask attached (Mask.shader)
+
+            // This works by only drawing if the value in the stencil buffer is not 2
+            // (Mask.shader writes 2 to the stencil buffer)
             Stencil
             {
                 Ref 2

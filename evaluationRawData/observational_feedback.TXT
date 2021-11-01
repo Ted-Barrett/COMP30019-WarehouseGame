@@ -1,0 +1,161 @@
+Participant 1
+
+Background: Very casual gamer
+
+	Wasn’t fully aware that the box had been successfully delivered, particularly in level 1:
+		Disappears far away (box collector range too big)
+		Didn’t find it obvious that the particle effect indicated successful delivery, thought that maybe box was destroyed for some reason
+			It comes from the box, which makes it seem more like the box was destroyed
+		No super obvious score increase
+
+	Didn’t always interact with what they wanted to
+
+
+	Suggestions:
+	Level retry/select
+	Respawning
+	Would be good with a target score to reach
+
+	Luke:
+	Not sure why but levels were dark in build, like it was using the cel shading or lights were turned down, but it’s normal in the editor?
+
+Participant 2 (Name is Josh, conducted by Ben)
+
+	Had no major issues with any gameplay elements
+	Had to figure out the controls (space to pick up), had the same problem with the large delivery vicinity
+	“Instantly understandable - red goes in the red, blue goes in the blue…”
+	Understood that getting hit by a vehicle was probably bad
+
+	Suggestions: 
+		The getting hit time was perhaps slightly too long
+
+
+Participant 3
+
+	Background: Non-gamer
+
+	Observations:
+		Could not complete without assistance
+		Was not aware of game objective without instruction
+		Was not aware of relationship between box colors and lorry colors
+		Did not interact with hand trucks
+		Was not able to clear forklifts after being initially hit 
+		Player floats when close to some drop off points
+		Drop off points hit boxes are too large
+
+	Relevant Quotes:
+		“I’m now trying to get into the tunnel” - when attempting to drop off package to wrong colored lorry
+		“What are the lorries?” - was not aware that drop off points on edges of map were meant to be delivery lorries
+
+Participant 4
+
+	Background: Non-gamer
+
+	Observations:
+		Could not complete without assistance
+		Was not aware of relationship between box colors and lorry colors
+		Was not clear that the player was earning points for package drop off
+		Not aware of time limit
+		Game lockout when hit out of the level by truck
+		Stuck on rails of High-Rise level
+		Game crashes when clicking next level after High-Rise 
+
+	Relevant Quotes:
+		“I was concentrating so hard on everything in the level that I didn’t even notice the color of the trucks” 
+
+Participant 5
+
+	Background: Casual gamer
+
+	Observations:
+		Completed all levels without assistance
+		Understood relationship between package, hand truck, and lorry colors
+		Used hand trucks without instruction
+		Was not aware that there were points or that there was a time limit, could not tell how much time was left
+		Carrying and truck animations have defects
+		Did not notice the camera shake when hit
+		Not enough time to play the game, levels too short
+
+	Relevant Quotes:
+		“I reckon I would see the points better if they were displayed in the top right corner”  - with respect to delivery score
+		“This seems impossible” - with respect to Uphill level, assumed character could not climb up to far side of level
+		“It’s not clear how many points you need to proceed to the next level… and there is no method of retrying for a higher score”
+
+Participant 6
+
+	Background: Casual gamer
+
+	Observations:
+		Completed all levels without assistance
+		Understood function of hand trucks without assistance
+
+	Relevant Quotes:
+		“The [numbers above the drop off bays] should be colored”
+		“These goddamn forklifts and trucks go so fast”
+		“This green grass is not good because it collides with the green lorry” 
+		“Some of the drop off bays appear to be in shadow or its just not obvious that they are where the boxes need to be delivered”
+
+Participant 7
+
+	Background: Non-gamer
+
+	Observations:
+		Did not utilise throwing
+		Was not clear that box was being successfully delivered
+		Was thrown off by the differently size box collectors
+		Felt there was not much progression between levels
+		Did not find it obvious that hand truck colour had to match box colour to pick up
+
+	Some minor bugs:
+		Death sound playing multiple times at once?
+		One time they died as the timer ended and the camera wouldn’t stop shaking in the end of level screen lol
+
+Participant 8
+
+	Background: Gamer
+
+	Observations:
+		Wanted tutorial
+		Boxes disappeared too early on level1
+		Expected boxes to be collected when thrown into truck
+		Got locked in a loop getting knocked down by forklifts
+		“Next” button on final level doesn’t do anything
+		Wanted a way to change the volume
+		
+	Relevant Quotes:
+		“The forklift hit me when I didn’t think I would get hit”
+		“A retry level would be good”
+		“I would prefer a key closer to WASD for throw”
+		Levels are “basically just the same things but in different forms” - would be good to have another mechanic
+
+Participant 9
+
+	Background: Casual-gamer
+
+	Observations:
+		Ran out of time without achieving much on each level
+		Thought the box got “lost” due to the large collection zones
+		Didn’t realise you can deliver the boxes without the trolley
+		Didn’t utilise throw mechanic
+		Didn’t understand which path to take on level_highrise, and walked off the map
+
+	Relevant quotes:
+		“I thought the drones were stealing my boxes”
+
+Participant 10
+
+	Background: Non-gamer
+
+	Note: is colourblind
+
+	Observations:
+		Struggled to differentiate the red and green boxes.
+		Didn’t know if the drones were enemies
+		Thought they were destroying the boxes on level1
+		Sometimes didn’t notice all 3 trucks
+		Didn’t realise the trolleys were colour coded to the boxes
+		By the final level, seemed to have a better grasp of the game mechanics
+		
+	Relevant quotes:
+		“It feels like I’ve hardly got started” in reference to the level timer
+		“It makes it interesting having to dodge the lorries and forklifts”

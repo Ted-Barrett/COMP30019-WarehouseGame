@@ -1,3 +1,5 @@
+// Creates a moving/flashing highlight effect using a moving texture
+
 Shader "Custom/Interactable Effect"
 {
     Properties
@@ -10,13 +12,16 @@ Shader "Custom/Interactable Effect"
 
         [HideInInspector] _Tau ("Tau", float) = 6.28319
     }
+
     SubShader
     {
+        // Setting up for transparency
         Tags { "RenderType"="Transparent" }
 
         Pass
         {
             ZWrite Off
+            // Use additive blending for a strong effect
             Blend One One
 
             CGPROGRAM
@@ -28,12 +33,10 @@ Shader "Custom/Interactable Effect"
             struct appdata
             {
                 float4 vertex : POSITION;
-                // float2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
-                // float2 uv : TEXCOORD0;
                 float2 viewPos : TEXCOORD1;
                 float4 position : SV_POSITION;
             };
@@ -46,6 +49,7 @@ Shader "Custom/Interactable Effect"
             float _FlashFreq;
             float _Tau;
 
+            // Convert to clip space and to view space
             v2f vert (appdata v)
             {
                 v2f o;
@@ -54,10 +58,18 @@ Shader "Custom/Interactable Effect"
                 return o;
             }
 
+            // Work out the time varying colour for each pixel
             float4 frag (v2f i) : SV_Target
             {
+                // Sample the texture using _MainTex_ST to account for tiling and offset
+                // Sample using the view pos and pan the texure with time
                 float4 col = tex2D(_MainTex, i.viewPos * _MainTex_ST + _Speed * _Time.y);
+
+                // Use the red value from the texture to interpolate between the base colour
+                // and shimmer colour
                 col = col.r * (_ShimmerColour - _BaseColour) + _BaseColour;
+
+                // Vary the colour intensity with time using sin
                 col = col * (sin(_Time.y * _Tau * _FlashFreq) + 1) / 2.0;
                 return col;
             }

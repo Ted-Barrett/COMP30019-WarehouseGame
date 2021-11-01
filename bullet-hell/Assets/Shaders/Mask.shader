@@ -5,6 +5,7 @@ Shader "Custom/Mask"
         Tags 
         { 
             "RenderType" = "Transparent" 
+            // Set the draw order to before the outline
             "Queue" = "Geometry-10"
         }
 
@@ -16,6 +17,8 @@ Shader "Custom/Mask"
             ZWrite Off
             ColorMask 0
 
+            // Always write a value of 2 to the stencil buffer 
+            // which is used as a mask for the box outline
             Stencil
             {
                 Ref 2
