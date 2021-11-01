@@ -75,7 +75,7 @@ Note that menus must be navigated using the mouse.
 
 - The objective is to deliver as many packages as possible within the time limit
 - Packages are coloured and can only be delivered to the same coloured lorry (i.e.: red packages to the red lorry)
-- Packages are worth 100 points each; the total score for the current game is displayed in the lower left corner
+- Packages are worth 100 points each; the total score for the current game is displayed in the lower left corner. At the end of the time limit, the player will be given a star rating from 0 to 3 stars (based on their score) which indicates their performance.
 - The time remaining for the current level is displayed in the lower right corner
 - The player can be hit by moving hazards such as forklifts. Getting knocked over by a hazard will waste time on the clock and also destroy any carried packages including those in a held hand truck
 - The player is able to carry one package at a time or pick up a hand truck to carry up to three packages at a time
